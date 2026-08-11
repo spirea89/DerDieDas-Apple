@@ -3,7 +3,6 @@ import SwiftUI
 struct GameView: View {
     @ObservedObject var viewModel: GameViewModel
     @ObservedObject var wordStore: WordStore
-    @FocusState private var answerFocused: Bool
 
     var body: some View {
         ZStack {
@@ -37,7 +36,7 @@ struct GameView: View {
         VStack(alignment: .leading, spacing: 18) {
             brandHero
 
-            Text("Practice German articles out loud. The app says the noun — you answer with der, die, or das plus the word.")
+            Text("Practice German articles out loud. The app says the noun — answer by speaking der, die, or das plus the word. No typing.")
                 .font(AppTheme.bodyFont)
                 .foregroundStyle(AppTheme.muted)
                 .fixedSize(horizontal: false, vertical: true)
@@ -85,14 +84,13 @@ struct GameView: View {
 
             Button {
                 viewModel.startGame()
-                answerFocused = true
             } label: {
                 Text(wordStore.hasWords ? "Start" : "Add words first")
             }
             .buttonStyle(PrimaryButtonStyle(disabled: !wordStore.hasWords))
             .disabled(!wordStore.hasWords)
 
-            Text("\(wordStore.words.count) words ready")
+            Text("\(wordStore.words.count) words ready · answers by voice")
                 .font(AppTheme.captionFont)
                 .foregroundStyle(AppTheme.muted)
         }
@@ -146,42 +144,19 @@ struct GameView: View {
             }
 
             promptCard
-
-            articleChooser
-
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Your answer")
-                    .font(AppTheme.captionFont)
-                    .foregroundStyle(AppTheme.muted)
-
-                TextField("der Sonne", text: $viewModel.answerText)
-                    .textInputAutocapitalization(.never)
-                    .autocorrectionDisabled()
-                    .focused($answerFocused)
-                    .submitLabel(.go)
-                    .onSubmit { viewModel.checkAnswer() }
-                    .font(AppTheme.titleFont)
-                    .textFieldStyle(RoundedFieldStyle())
-
-                Text("Type the article and the word together.")
-                    .font(AppTheme.captionFont)
-                    .foregroundStyle(AppTheme.muted)
-            }
-
+            listeningPanel
             feedbackBanner
 
             HStack(spacing: 10) {
                 Button {
-                    viewModel.checkAnswer()
+                    viewModel.speakCurrentWord()
                 } label: {
-                    Text("Check")
+                    Label("Hear again", systemImage: "speaker.wave.2.fill")
                 }
-                .buttonStyle(PrimaryButtonStyle(disabled: !viewModel.canCheck))
-                .disabled(!viewModel.canCheck)
+                .buttonStyle(SecondaryButtonStyle())
 
                 Button {
                     viewModel.skipWord()
-                    answerFocused = true
                 } label: {
                     Text("Skip")
                 }
@@ -189,12 +164,14 @@ struct GameView: View {
             }
 
             HStack(spacing: 10) {
-                Button {
-                    viewModel.speakCurrentWord()
-                } label: {
-                    Label("Hear word", systemImage: "speaker.wave.2.fill")
+                if viewModel.authorizationDenied || (!viewModel.isListening && !viewModel.isSpeakingPrompt && viewModel.feedback == .idle) {
+                    Button {
+                        viewModel.retryListening()
+                    } label: {
+                        Label("Listen again", systemImage: "mic.fill")
+                    }
+                    .buttonStyle(PrimaryButtonStyle())
                 }
-                .buttonStyle(GhostButtonStyle())
 
                 Button {
                     viewModel.resetToSetup()
@@ -204,7 +181,6 @@ struct GameView: View {
                 .buttonStyle(GhostButtonStyle())
             }
         }
-        .onAppear { answerFocused = true }
     }
 
     private var scoreStrip: some View {
@@ -245,7 +221,7 @@ struct GameView: View {
                 .id(viewModel.currentWord?.id)
                 .transition(.asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity), removal: .opacity))
 
-            Text("Say or type the article + this word")
+            Text("Say the article + this word out loud")
                 .font(AppTheme.bodyFont)
                 .foregroundStyle(AppTheme.muted)
         }
@@ -269,30 +245,86 @@ struct GameView: View {
         )
     }
 
-    private var articleChooser: some View {
-        HStack(spacing: 10) {
-            ForEach(Article.allCases) { article in
-                Button {
-                    viewModel.selectArticle(article)
-                    answerFocused = true
-                } label: {
-                    Text(article.label)
-                        .font(AppTheme.titleFont)
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                        .background(AppTheme.articleColor(article).opacity(viewModel.selectedArticle == article ? 1 : 0.78))
-                        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                .stroke(.white.opacity(viewModel.selectedArticle == article ? 0.9 : 0), lineWidth: 2)
-                        )
-                        .scaleEffect(viewModel.selectedArticle == article ? 1.03 : 1)
+    private var listeningPanel: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 10) {
+                ZStack {
+                    Circle()
+                        .fill(micColor.opacity(0.18))
+                        .frame(width: 52, height: 52)
+                    Image(systemName: micSymbol)
+                        .font(.system(size: 22, weight: .bold))
+                        .foregroundStyle(micColor)
+                        .symbolEffect(.pulse, isActive: viewModel.isListening)
                 }
-                .buttonStyle(.plain)
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(statusTitle)
+                        .font(AppTheme.titleFont)
+                        .foregroundStyle(AppTheme.ink)
+                    if let hint = viewModel.recognitionHint, !hint.isEmpty {
+                        Text(hint)
+                            .font(AppTheme.captionFont)
+                            .foregroundStyle(AppTheme.muted)
+                    }
+                }
+                Spacer(minLength: 0)
+            }
+
+            if !viewModel.liveTranscript.isEmpty {
+                Text(viewModel.liveTranscript)
+                    .font(AppTheme.titleFont)
+                    .foregroundStyle(AppTheme.ink)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(12)
+                    .background(Color.white)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .stroke(AppTheme.line, lineWidth: 1)
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    .accessibilityLabel("Heard \(viewModel.liveTranscript)")
+            } else {
+                Text("Your spoken answer will appear here.")
+                    .font(AppTheme.captionFont)
+                    .foregroundStyle(AppTheme.muted)
             }
         }
-        .animation(.spring(response: 0.3, dampingFraction: 0.7), value: viewModel.selectedArticle)
+        .padding(16)
+        .background(AppTheme.surface)
+        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .animation(.easeInOut(duration: 0.2), value: viewModel.isListening)
+        .animation(.easeInOut(duration: 0.2), value: viewModel.liveTranscript)
+    }
+
+    private var statusTitle: String {
+        if viewModel.isSpeakingPrompt { return "Hearing the word" }
+        if viewModel.isListening { return "Listening" }
+        switch viewModel.feedback {
+        case .correct: return "Correct"
+        case .incorrect: return "Not quite"
+        default: return "Ready when you are"
+        }
+    }
+
+    private var micSymbol: String {
+        if viewModel.isSpeakingPrompt { return "speaker.wave.2.fill" }
+        if viewModel.isListening { return "mic.fill" }
+        switch viewModel.feedback {
+        case .correct: return "checkmark.circle.fill"
+        case .incorrect: return "xmark.circle.fill"
+        default: return "mic"
+        }
+    }
+
+    private var micColor: Color {
+        if viewModel.isSpeakingPrompt { return AppTheme.accent }
+        if viewModel.isListening { return AppTheme.die }
+        switch viewModel.feedback {
+        case .correct: return AppTheme.success
+        case .incorrect: return AppTheme.danger
+        default: return AppTheme.muted
+        }
     }
 
     @ViewBuilder
@@ -308,10 +340,10 @@ struct GameView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(AppTheme.success.opacity(0.12))
                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-        case .incorrect(_, let heard):
+        case .incorrect(let expected, let heard):
             VStack(alignment: .leading, spacing: 4) {
-                Label("Almost. Heard: \(heard)", systemImage: "arrow.triangle.2.circlepath")
-                Text("Answer with both the article and the word, then Check again.")
+                Label("Heard: \(heard)", systemImage: "ear.fill")
+                Text("Correct is \(expected). Next word coming up…")
                     .font(AppTheme.captionFont)
             }
             .font(AppTheme.bodyFont.weight(.semibold))

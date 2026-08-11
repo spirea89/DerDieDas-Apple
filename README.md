@@ -5,9 +5,9 @@ Native SwiftUI iOS app for practicing German articles — based on the **DER/DIE
 ## How to play
 
 1. The app shows (and speaks) a noun **without** the article.
-2. Answer with **both** the article and the word, for example `die Sonne`.
-3. Tap **Check**. Correct answers score a point; wrong answers can be tried again.
-4. Use **Hear word** to listen again, or **Skip** to move on.
+2. **Say** the article and the word out loud, for example `die Sonne`.
+3. The app listens, tells you if you were right, speaks the full phrase, and moves to the next word automatically.
+4. Use **Hear again** to replay the noun, **Listen again** if the mic stopped, or **Skip** to move on.
 
 ## Multiplayer
 
@@ -23,6 +23,7 @@ On the Play setup screen choose 1–6 players, names, and rounds per player. Tur
 ## Requirements
 
 - macOS with Xcode 15 or newer (iOS 17+)
+- Microphone + Speech Recognition permission (prompted on first play)
 - Apple Developer account for device installs / App Store submission
 
 ## Open and run in Xcode
@@ -30,7 +31,8 @@ On the Play setup screen choose 1–6 players, names, and rounds per player. Tur
 1. Clone this repository.
 2. Open `DerDieDas.xcodeproj` in Xcode.
 3. Select the **DerDieDas** target and set your Team under Signing & Capabilities.
-4. Choose an iPhone/iPad simulator and press Run.
+4. Choose an iPhone/iPad simulator or device and press Run.
+5. Allow microphone and speech recognition when prompted (use a real device for best voice results).
 
 Display name: **Der Die Das**  
 Bundle ID: `com.spirea89.DerDieDas`

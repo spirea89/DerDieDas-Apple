@@ -22,6 +22,10 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.education</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Der Die Das listens so you can answer der, die, or das out loud.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Der Die Das recognizes your spoken German answers to check if the article is correct.</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

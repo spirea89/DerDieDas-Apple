@@ -2,36 +2,63 @@ import AVFoundation
 import Foundation
 
 @MainActor
-final class SpeechService {
+final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
     private let synthesizer = AVSpeechSynthesizer()
     private var didConfigureSession = false
+    private var speakContinuation: CheckedContinuation<Void, Never>?
 
-    func speakGerman(_ prompt: String) {
+    override init() {
+        super.init()
+        synthesizer.delegate = self
+    }
+
+    func speakGerman(_ prompt: String) async {
         guard !prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         synthesizer.stopSpeaking(at: .immediate)
+        finishSpeakWait()
         configureAudioSessionIfNeeded()
 
-        let utterance = AVSpeechUtterance(string: prompt)
-        utterance.voice = preferredGermanVoice()
-        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.88
-        utterance.pitchMultiplier = 1.02
-        utterance.volume = 1.0
-        synthesizer.speak(utterance)
+        await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>) in
+            speakContinuation = continuation
+            let utterance = AVSpeechUtterance(string: prompt)
+            utterance.voice = preferredGermanVoice()
+            utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.88
+            utterance.pitchMultiplier = 1.02
+            utterance.volume = 1.0
+            synthesizer.speak(utterance)
+        }
+    }
+
+    func speakGerman(_ prompt: String) {
+        Task { await speakGerman(prompt) }
     }
 
     func cancel() {
         synthesizer.stopSpeaking(at: .immediate)
+        finishSpeakWait()
+    }
+
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        Task { @MainActor in
+            self.finishSpeakWait()
+        }
+    }
+
+    nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        Task { @MainActor in
+            self.finishSpeakWait()
+        }
+    }
+
+    private func finishSpeakWait() {
+        speakContinuation?.resume()
+        speakContinuation = nil
     }
 
     private func configureAudioSessionIfNeeded() {
-        guard !didConfigureSession else {
-            try? AVAudioSession.sharedInstance().setActive(true, options: [])
-            return
-        }
-
         let session = AVAudioSession.sharedInstance()
         do {
-            try session.setCategory(.playback, mode: .spokenAudio, options: [.duckOthers])
+            try session.setCategory(.playAndRecord, mode: .spokenAudio, options: [.defaultToSpeaker, .duckOthers])
             try session.setActive(true, options: [])
             didConfigureSession = true
         } catch {

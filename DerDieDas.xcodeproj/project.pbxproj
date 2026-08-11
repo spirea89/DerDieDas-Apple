@@ -19,6 +19,7 @@
 		F10000000000000000000011 /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* WordStore.swift */; };
 		F10000000000000000000012 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* SpeechService.swift */; };
 		F10000000000000000000013 /* GermanText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* GermanText.swift */; };
+		F10000000000000000000016 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000017 /* SpeechRecognitionService.swift */; };
 		F10000000000000000000014 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000014 /* words.json */; };
 		F10000000000000000000015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000015 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		A10000000000000000000011 /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
 		A10000000000000000000012 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
 		A10000000000000000000013 /* GermanText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanText.swift; sourceTree = "<group>"; };
+		A10000000000000000000017 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
 		A10000000000000000000014 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		A10000000000000000000015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10000000000000000000016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				A10000000000000000000013 /* GermanText.swift */,
 				A10000000000000000000012 /* SpeechService.swift */,
+				A10000000000000000000017 /* SpeechRecognitionService.swift */,
 				A10000000000000000000011 /* WordStore.swift */,
 			);
 			path = Services;
@@ -232,6 +235,7 @@
 				F10000000000000000000010 /* ConfigureViewModel.swift in Sources */,
 				F10000000000000000000011 /* WordStore.swift in Sources */,
 				F10000000000000000000012 /* SpeechService.swift in Sources */,
+				F10000000000000000000016 /* SpeechRecognitionService.swift in Sources */,
 				F10000000000000000000013 /* GermanText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

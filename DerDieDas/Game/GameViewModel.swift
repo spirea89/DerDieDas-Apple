@@ -14,49 +14,51 @@ final class GameViewModel: ObservableObject {
     @Published var showCelebration = false
 
     @Published var currentWord: ArticleWord?
-    @Published var answerText = ""
-    @Published var selectedArticle: Article?
     @Published var feedback: FeedbackState = .idle
     @Published var streak = 0
     @Published var promptBounce = false
+    @Published var isSpeakingPrompt = false
+    @Published var isAwaitingSpeech = false
+    @Published var isListening = false
+    @Published var liveTranscript = ""
+    @Published var recognitionHint: String?
+    @Published var authorizationDenied = false
 
     private weak var wordStore: WordStore?
     private let speech = SpeechService()
+    private let recognizer = SpeechRecognitionService()
     private var recentWordIDs: [String] = []
     private let recentWindow = 12
+    private var advanceTask: Task<Void, Never>?
+    private var listenTask: Task<Void, Never>?
+    private var roundToken = UUID()
+    private var hasResolvedCurrentAnswer = false
+    private var cancellables = Set<AnyCancellable>()
 
     let roundOptions = [5, 10, 15, 20, 30]
 
     init(wordStore: WordStore) {
         self.wordStore = wordStore
+        recognizer.onTranscript = { [weak self] text, isFinal in
+            self?.handleTranscript(text, isFinal: isFinal)
+        }
+        recognizer.$isListening
+            .receive(on: RunLoop.main)
+            .sink { [weak self] value in self?.isListening = value }
+            .store(in: &cancellables)
+        recognizer.$authorizationDenied
+            .receive(on: RunLoop.main)
+            .sink { [weak self] value in self?.authorizationDenied = value }
+            .store(in: &cancellables)
     }
 
     func attach(wordStore: WordStore) {
         self.wordStore = wordStore
     }
 
-    var setupLocked: Bool { gameStarted && !gameOver }
     var currentPlayer: Player? {
         guard players.indices.contains(currentPlayerIndex) else { return nil }
         return players[currentPlayerIndex]
-    }
-
-    var canCheck: Bool {
-        gameStarted && !gameOver && currentWord != nil && !normalizedAnswerInput.isEmpty
-    }
-
-    private var normalizedAnswerInput: String {
-        let typed = answerText.trimmingCharacters(in: .whitespacesAndNewlines)
-        if let selectedArticle, !typed.isEmpty {
-            // If the user tapped an article chip and typed only the noun, compose both.
-            if GermanText.parseArticle(typed) == nil {
-                return "\(selectedArticle.rawValue) \(typed)"
-            }
-        }
-        if let selectedArticle, typed.isEmpty {
-            return selectedArticle.rawValue
-        }
-        return typed
     }
 
     func syncPlayerNames() {
@@ -84,28 +86,38 @@ final class GameViewModel: ObservableObject {
         streak = 0
         recentWordIDs.removeAll()
         feedback = .idle
+        liveTranscript = ""
+        recognitionHint = nil
         pickNextWord(speak: true)
     }
 
     func resetToSetup() {
+        cancelPendingWork()
         speech.cancel()
+        stopRecognizer(resetTranscript: true)
         gameStarted = false
         gameOver = false
         showCelebration = false
         players = []
         currentPlayerIndex = 0
         currentWord = nil
-        answerText = ""
-        selectedArticle = nil
         feedback = .idle
         streak = 0
         recentWordIDs.removeAll()
+        isSpeakingPrompt = false
+        isAwaitingSpeech = false
+        isListening = false
+        liveTranscript = ""
+        recognitionHint = nil
+        authorizationDenied = false
+        hasResolvedCurrentAnswer = false
     }
 
     func pickNextWord(speak: Bool) {
         guard let store = wordStore, store.hasWords else {
             currentWord = nil
             feedback = .empty
+            isAwaitingSpeech = false
             return
         }
 
@@ -118,67 +130,30 @@ final class GameViewModel: ObservableObject {
             return
         }
 
+        cancelPendingWork()
+        stopRecognizer(resetTranscript: true)
+
         currentWord = next
         recentWordIDs.append(next.id)
         if recentWordIDs.count > recentWindow {
             recentWordIDs.removeFirst(recentWordIDs.count - recentWindow)
         }
 
-        answerText = ""
-        selectedArticle = nil
         feedback = .idle
+        liveTranscript = ""
+        recognitionHint = nil
+        hasResolvedCurrentAnswer = false
+        isAwaitingSpeech = false
         withAnimation(.spring(response: 0.45, dampingFraction: 0.62)) {
             promptBounce.toggle()
         }
         if speak {
-            speakCurrentWord()
+            beginPromptAndListen()
         }
     }
 
     func speakCurrentWord() {
-        guard let word = currentWord?.word else { return }
-        speech.speakGerman(word)
-    }
-
-    func speakFullAnswer() {
-        guard let phrase = currentWord?.fullPhrase else { return }
-        speech.speakGerman(phrase)
-    }
-
-    func selectArticle(_ article: Article) {
-        selectedArticle = article
-        if answerText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            answerText = "\(article.rawValue) "
-        } else if GermanText.parseArticle(answerText.split(separator: " ").first.map(String.init) ?? "") == nil {
-            answerText = "\(article.rawValue) \(answerText.trimmingCharacters(in: .whitespacesAndNewlines))"
-        } else {
-            var parts = answerText.split(separator: " ").map(String.init)
-            if !parts.isEmpty {
-                parts[0] = article.rawValue
-                answerText = parts.joined(separator: " ")
-            }
-        }
-    }
-
-    func checkAnswer() {
-        guard let expected = currentWord, canCheck else { return }
-        let raw = normalizedAnswerInput
-
-        if GermanText.answersMatch(expected: expected, rawAnswer: raw) {
-            streak += 1
-            awardPoint()
-            feedback = .correct(expected.fullPhrase)
-            speech.speakGerman(expected.fullPhrase)
-            Task {
-                try? await Task.sleep(nanoseconds: 1_100_000_000)
-                advanceTurn()
-            }
-            return
-        }
-
-        streak = 0
-        let heard = GermanText.parseAnswer(raw).map { "\($0.article.rawValue) \($0.word)" } ?? raw
-        feedback = .incorrect(expected: expected.fullPhrase, heard: heard)
+        beginPromptAndListen()
     }
 
     func skipWord() {
@@ -186,6 +161,129 @@ final class GameViewModel: ObservableObject {
         feedback = .idle
         consumeTurnWithoutScore()
         advanceTurn()
+    }
+
+    func retryListening() {
+        guard gameStarted, !gameOver, currentWord != nil, !hasResolvedCurrentAnswer else { return }
+        feedback = .idle
+        liveTranscript = ""
+        recognitionHint = nil
+        beginListeningOnly()
+    }
+
+    private func beginPromptAndListen() {
+        guard let word = currentWord?.word else { return }
+        let token = UUID()
+        roundToken = token
+        cancelPendingWork()
+        stopRecognizer(resetTranscript: true)
+        liveTranscript = ""
+        isAwaitingSpeech = false
+        isSpeakingPrompt = true
+        recognitionHint = "Listen…"
+
+        listenTask = Task { [weak self] in
+            guard let self else { return }
+            await self.speech.speakGerman(word)
+            guard !Task.isCancelled, self.roundToken == token, self.gameStarted, !self.gameOver else { return }
+            // Brief gap so TTS audio does not bleed into recognition.
+            try? await Task.sleep(nanoseconds: 280_000_000)
+            guard !Task.isCancelled, self.roundToken == token else { return }
+            self.isSpeakingPrompt = false
+            await self.startListening(token: token)
+        }
+    }
+
+    private func beginListeningOnly() {
+        let token = roundToken
+        cancelPendingWork()
+        stopRecognizer(resetTranscript: true)
+        isSpeakingPrompt = false
+        listenTask = Task { [weak self] in
+            guard let self else { return }
+            await self.startListening(token: token)
+        }
+    }
+
+    private func startListening(token: UUID) async {
+        guard roundToken == token, gameStarted, !gameOver, !hasResolvedCurrentAnswer else { return }
+        recognitionHint = "Say the article and the word…"
+        isAwaitingSpeech = true
+        await recognizer.startListening()
+        syncRecognizerState()
+        if authorizationDenied {
+            isAwaitingSpeech = false
+            recognitionHint = recognizer.statusMessage
+        } else if !isListening {
+            isAwaitingSpeech = false
+            recognitionHint = recognizer.statusMessage ?? "Could not start listening."
+        } else {
+            recognitionHint = "Listening… say der/die/das + word"
+        }
+    }
+
+    private func syncRecognizerState() {
+        isListening = recognizer.isListening
+        authorizationDenied = recognizer.authorizationDenied
+    }
+
+    private func stopRecognizer(resetTranscript: Bool) {
+        recognizer.stopListening(resetTranscript: resetTranscript)
+        syncRecognizerState()
+    }
+
+    private func handleTranscript(_ text: String, isFinal: Bool) {
+        guard gameStarted, !gameOver, !hasResolvedCurrentAnswer, let expected = currentWord else { return }
+        liveTranscript = text
+
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+
+        // Accept as soon as the spoken phrase fully matches — don't wait for silence.
+        if GermanText.answersMatch(expected: expected, rawAnswer: trimmed) {
+            resolveAnswer(raw: trimmed)
+            return
+        }
+
+        // Otherwise wait until Speech finalizes (or silence debounce) before marking wrong.
+        if isFinal {
+            resolveAnswer(raw: trimmed)
+        }
+    }
+
+    private func resolveAnswer(raw: String) {
+        guard let expected = currentWord, !hasResolvedCurrentAnswer else { return }
+        hasResolvedCurrentAnswer = true
+        isAwaitingSpeech = false
+        recognitionHint = nil
+        stopRecognizer(resetTranscript: false)
+        liveTranscript = raw
+
+        if GermanText.answersMatch(expected: expected, rawAnswer: raw) {
+            streak += 1
+            awardPoint()
+            feedback = .correct(expected.fullPhrase)
+            speech.speakGerman(expected.fullPhrase)
+            scheduleAdvance(after: 1.25)
+            return
+        }
+
+        streak = 0
+        let heard = GermanText.parseAnswer(raw).map { "\($0.article.rawValue) \($0.word)" } ?? raw
+        feedback = .incorrect(expected: expected.fullPhrase, heard: heard)
+        speech.speakGerman(expected.fullPhrase)
+        consumeTurnWithoutScore()
+        scheduleAdvance(after: 1.6)
+    }
+
+    private func scheduleAdvance(after seconds: Double) {
+        advanceTask?.cancel()
+        let token = roundToken
+        advanceTask = Task { [weak self] in
+            try? await Task.sleep(nanoseconds: UInt64(seconds * 1_000_000_000))
+            guard let self, !Task.isCancelled, self.roundToken == token else { return }
+            self.advanceTurn()
+        }
     }
 
     private func awardPoint() {
@@ -200,10 +298,15 @@ final class GameViewModel: ObservableObject {
     }
 
     private func advanceTurn() {
+        cancelPendingWork()
+        stopRecognizer(resetTranscript: true)
         if players.allSatisfy({ $0.turns >= roundLimit }) {
             gameOver = true
             showCelebration = true
             speech.cancel()
+            isSpeakingPrompt = false
+            isAwaitingSpeech = false
+            isListening = false
             return
         }
         moveToNextPlayer()
@@ -219,6 +322,14 @@ final class GameViewModel: ObservableObject {
             guardCount += 1
         }
         currentPlayerIndex = next
+    }
+
+    private func cancelPendingWork() {
+        advanceTask?.cancel()
+        advanceTask = nil
+        listenTask?.cancel()
+        listenTask = nil
+        speech.cancel()
     }
 
     var winners: [Player] {
