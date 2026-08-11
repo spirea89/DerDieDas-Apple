@@ -12,7 +12,7 @@ final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
         synthesizer.delegate = self
     }
 
-    func speakGerman(_ prompt: String) async {
+    func speakGerman(_ prompt: String, rateMultiplier: Float = 0.88) async {
         guard !prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         synthesizer.stopSpeaking(at: .immediate)
         finishSpeakWait()
@@ -22,15 +22,17 @@ final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
             speakContinuation = continuation
             let utterance = AVSpeechUtterance(string: prompt)
             utterance.voice = preferredGermanVoice()
-            utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.88
+            let clamped = min(max(rateMultiplier, 0.5), 1.2)
+            utterance.rate = AVSpeechUtteranceDefaultSpeechRate * clamped
             utterance.pitchMultiplier = 1.02
             utterance.volume = 1.0
             synthesizer.speak(utterance)
 
             // Never block the game forever if the synthesizer fails to callback.
             speakTimeoutTask?.cancel()
+            let timeoutNs = UInt64((6.0 / Double(clamped)) * 1_000_000_000)
             speakTimeoutTask = Task { [weak self] in
-                try? await Task.sleep(nanoseconds: 4_000_000_000)
+                try? await Task.sleep(nanoseconds: timeoutNs)
                 await MainActor.run {
                     self?.finishSpeakWait()
                 }
@@ -38,8 +40,8 @@ final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
         }
     }
 
-    func speakGerman(_ prompt: String) {
-        Task { await speakGerman(prompt) }
+    func speakGerman(_ prompt: String, rateMultiplier: Float = 0.88) {
+        Task { await speakGerman(prompt, rateMultiplier: rateMultiplier) }
     }
 
     func cancel() {

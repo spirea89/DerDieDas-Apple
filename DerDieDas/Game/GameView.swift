@@ -82,6 +82,26 @@ struct GameView: View {
             .background(AppTheme.surface)
             .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
 
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Pace")
+                    .font(AppTheme.captionFont)
+                    .foregroundStyle(AppTheme.muted)
+
+                Picker("Pace", selection: $viewModel.gameSpeed) {
+                    ForEach(GameSpeed.allCases) { speed in
+                        Text(speed.label).tag(speed)
+                    }
+                }
+                .pickerStyle(.segmented)
+
+                Text(paceHelpText)
+                    .font(AppTheme.captionFont)
+                    .foregroundStyle(AppTheme.muted)
+            }
+            .padding(16)
+            .background(AppTheme.surface)
+            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+
             Button {
                 viewModel.startGame()
             } label: {
@@ -95,6 +115,17 @@ struct GameView: View {
                 .foregroundStyle(AppTheme.muted)
         }
         .onAppear { viewModel.syncPlayerNames() }
+    }
+
+    private var paceHelpText: String {
+        switch viewModel.gameSpeed {
+        case .slow:
+            return "Slower speech and a longer pause before the next word."
+        case .normal:
+            return "Balanced speech and pause between words."
+        case .fast:
+            return "Quicker speech and a shorter pause between words."
+        }
     }
 
     private var brandHero: some View {
@@ -142,6 +173,8 @@ struct GameView: View {
             if viewModel.players.count > 1 {
                 ScoreboardView(players: viewModel.players, currentPlayerID: viewModel.currentPlayer?.id)
             }
+
+            paceStrip
 
             promptCard
             listeningPanel
@@ -203,6 +236,20 @@ struct GameView: View {
                     .font(AppTheme.captionFont)
                     .foregroundStyle(AppTheme.muted)
             }
+        }
+    }
+
+    private var paceStrip: some View {
+        HStack(spacing: 10) {
+            Text("Pace")
+                .font(AppTheme.captionFont)
+                .foregroundStyle(AppTheme.muted)
+            Picker("Pace", selection: $viewModel.gameSpeed) {
+                ForEach(GameSpeed.allCases) { speed in
+                    Text(speed.label).tag(speed)
+                }
+            }
+            .pickerStyle(.segmented)
         }
     }
 

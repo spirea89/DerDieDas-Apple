@@ -7,7 +7,8 @@ Native SwiftUI iOS app for practicing German articles — based on the **DER/DIE
 1. The app shows (and speaks) a noun **without** the article.
 2. **Say** the article and the word out loud, for example `die Sonne`.
 3. The app listens, tells you if you were right, speaks the full phrase, and moves to the next word automatically.
-4. Use **Hear again** to replay the noun, **Listen again** if the mic stopped, or **Skip** to move on.
+4. Use **Pace** (Slow / Normal / Fast) to control speech speed and the pause between words.
+5. Use **Hear again** to replay the noun, **Listen again** if the mic stopped, or **Skip** to move on.
 
 ## Multiplayer
 

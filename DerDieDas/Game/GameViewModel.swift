@@ -7,6 +7,7 @@ final class GameViewModel: ObservableObject {
     @Published var playerCount = 1
     @Published var playerNames: [String] = ["Player 1"]
     @Published var roundLimit = 10
+    @Published var gameSpeed: GameSpeed = .normal
     @Published var players: [Player] = []
     @Published var currentPlayerIndex = 0
     @Published var gameStarted = false
@@ -34,11 +35,16 @@ final class GameViewModel: ObservableObject {
     private var roundToken = UUID()
     private var hasResolvedCurrentAnswer = false
     private var cancellables = Set<AnyCancellable>()
+    private let speedDefaultsKey = "derDieDas.gameSpeed"
 
     let roundOptions = [5, 10, 15, 20, 30]
 
     init(wordStore: WordStore) {
         self.wordStore = wordStore
+        if let saved = UserDefaults.standard.string(forKey: speedDefaultsKey),
+           let speed = GameSpeed(rawValue: saved) {
+            gameSpeed = speed
+        }
         recognizer.onTranscript = { [weak self] text, isFinal in
             self?.handleTranscript(text, isFinal: isFinal)
         }
@@ -49,6 +55,13 @@ final class GameViewModel: ObservableObject {
         recognizer.$authorizationDenied
             .receive(on: RunLoop.main)
             .sink { [weak self] value in self?.authorizationDenied = value }
+            .store(in: &cancellables)
+        $gameSpeed
+            .dropFirst()
+            .sink { [weak self] speed in
+                guard let self else { return }
+                UserDefaults.standard.set(speed.rawValue, forKey: self.speedDefaultsKey)
+            }
             .store(in: &cancellables)
     }
 
@@ -185,10 +198,11 @@ final class GameViewModel: ObservableObject {
 
         listenTask = Task { [weak self] in
             guard let self else { return }
-            await self.speech.speakGerman(word)
+            await self.speech.speakGerman(word, rateMultiplier: self.gameSpeed.speechRateMultiplier)
             guard !Task.isCancelled, self.roundToken == token, self.gameStarted, !self.gameOver else { return }
             // Brief gap so TTS audio does not bleed into recognition.
-            try? await Task.sleep(nanoseconds: 350_000_000)
+            let gap = self.gameSpeed.postPromptDelay
+            try? await Task.sleep(nanoseconds: UInt64(gap * 1_000_000_000))
             guard !Task.isCancelled, self.roundToken == token else { return }
             self.isSpeakingPrompt = false
             await self.startListening(token: token)
@@ -264,17 +278,17 @@ final class GameViewModel: ObservableObject {
             streak += 1
             awardPoint()
             feedback = .correct(expected.fullPhrase)
-            speech.speakGerman(expected.fullPhrase)
-            scheduleAdvance(after: 1.25)
+            speech.speakGerman(expected.fullPhrase, rateMultiplier: gameSpeed.speechRateMultiplier)
+            scheduleAdvance(after: gameSpeed.correctAdvanceDelay)
             return
         }
 
         streak = 0
         let heard = GermanText.parseAnswer(raw).map { "\($0.article.rawValue) \($0.word)" } ?? raw
         feedback = .incorrect(expected: expected.fullPhrase, heard: heard)
-        speech.speakGerman(expected.fullPhrase)
+        speech.speakGerman(expected.fullPhrase, rateMultiplier: gameSpeed.speechRateMultiplier)
         consumeTurnWithoutScore()
-        scheduleAdvance(after: 1.6)
+        scheduleAdvance(after: gameSpeed.incorrectAdvanceDelay)
     }
 
     private func scheduleAdvance(after seconds: Double) {
