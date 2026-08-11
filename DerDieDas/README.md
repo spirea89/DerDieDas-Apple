@@ -25,12 +25,11 @@ On the Play setup screen choose 1–6 players, names, and rounds per player. Tur
 - macOS with Xcode 15 or newer (iOS 17+)
 - Apple Developer account for device installs / App Store submission
 
-## Open and run in Xcode
+## Open and run
 
-1. Clone this repository.
-2. Open `DerDieDas.xcodeproj` in Xcode.
-3. Select the **DerDieDas** target and set your Team under Signing & Capabilities.
-4. Choose an iPhone/iPad simulator and press Run.
+1. Open `DerDieDas.xcodeproj` in Xcode.
+2. Select the **DerDieDas** target and set your Team under Signing & Capabilities.
+3. Choose an iPhone/iPad simulator and press Run.
 
 Display name: **Der Die Das**  
 Bundle ID: `com.spirea89.DerDieDas`

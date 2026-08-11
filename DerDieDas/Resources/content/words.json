@@ -1,0 +1,3708 @@
+{
+  "version": 1,
+  "source": "GermanaTeodora/data/article-words.txt",
+  "words": [
+    {
+      "id": "der-Mann",
+      "word": "Mann",
+      "article": "der",
+      "emoji": "👨"
+    },
+    {
+      "id": "die-Frau",
+      "word": "Frau",
+      "article": "die",
+      "emoji": "👩"
+    },
+    {
+      "id": "das-Kind",
+      "word": "Kind",
+      "article": "das",
+      "emoji": "🧒"
+    },
+    {
+      "id": "das-Haus",
+      "word": "Haus",
+      "article": "das",
+      "emoji": "🏠"
+    },
+    {
+      "id": "das-Auto",
+      "word": "Auto",
+      "article": "das",
+      "emoji": "🚗"
+    },
+    {
+      "id": "der-Baum",
+      "word": "Baum",
+      "article": "der",
+      "emoji": "🌳"
+    },
+    {
+      "id": "die-Blume",
+      "word": "Blume",
+      "article": "die",
+      "emoji": "🌸"
+    },
+    {
+      "id": "der-Hund",
+      "word": "Hund",
+      "article": "der",
+      "emoji": "🐕"
+    },
+    {
+      "id": "die-Katze",
+      "word": "Katze",
+      "article": "die",
+      "emoji": "🐈"
+    },
+    {
+      "id": "das-Pferd",
+      "word": "Pferd",
+      "article": "das",
+      "emoji": "🐎"
+    },
+    {
+      "id": "der-Vogel",
+      "word": "Vogel",
+      "article": "der",
+      "emoji": "🐦"
+    },
+    {
+      "id": "der-Fisch",
+      "word": "Fisch",
+      "article": "der",
+      "emoji": "🐟"
+    },
+    {
+      "id": "der-Apfel",
+      "word": "Apfel",
+      "article": "der",
+      "emoji": "🍎"
+    },
+    {
+      "id": "die-Banane",
+      "word": "Banane",
+      "article": "die",
+      "emoji": "🍌"
+    },
+    {
+      "id": "das-Brot",
+      "word": "Brot",
+      "article": "das",
+      "emoji": "🍞"
+    },
+    {
+      "id": "die-Milch",
+      "word": "Milch",
+      "article": "die",
+      "emoji": "🥛"
+    },
+    {
+      "id": "das-Wasser",
+      "word": "Wasser",
+      "article": "das",
+      "emoji": "💧"
+    },
+    {
+      "id": "die-Sonne",
+      "word": "Sonne",
+      "article": "die",
+      "emoji": "☀️"
+    },
+    {
+      "id": "der-Mond",
+      "word": "Mond",
+      "article": "der",
+      "emoji": "🌙"
+    },
+    {
+      "id": "der-Stern",
+      "word": "Stern",
+      "article": "der",
+      "emoji": "⭐"
+    },
+    {
+      "id": "die-Schule",
+      "word": "Schule",
+      "article": "die",
+      "emoji": "🏫"
+    },
+    {
+      "id": "das-Buch",
+      "word": "Buch",
+      "article": "das",
+      "emoji": "📖"
+    },
+    {
+      "id": "der-Stift",
+      "word": "Stift",
+      "article": "der",
+      "emoji": "✏️"
+    },
+    {
+      "id": "der-Tisch",
+      "word": "Tisch",
+      "article": "der",
+      "emoji": "🪑"
+    },
+    {
+      "id": "der-Stuhl",
+      "word": "Stuhl",
+      "article": "der",
+      "emoji": "🪑"
+    },
+    {
+      "id": "die-Tür",
+      "word": "Tür",
+      "article": "die",
+      "emoji": "🚪"
+    },
+    {
+      "id": "das-Fenster",
+      "word": "Fenster",
+      "article": "das",
+      "emoji": "🪟"
+    },
+    {
+      "id": "das-Bett",
+      "word": "Bett",
+      "article": "das",
+      "emoji": "🛏️"
+    },
+    {
+      "id": "der-Ball",
+      "word": "Ball",
+      "article": "der",
+      "emoji": "⚽"
+    },
+    {
+      "id": "das-Spiel",
+      "word": "Spiel",
+      "article": "das",
+      "emoji": "🎲"
+    },
+    {
+      "id": "die-Hand",
+      "word": "Hand",
+      "article": "die",
+      "emoji": "✋"
+    },
+    {
+      "id": "der-Fuß",
+      "word": "Fuß",
+      "article": "der",
+      "emoji": "🦶"
+    },
+    {
+      "id": "der-Kopf",
+      "word": "Kopf",
+      "article": "der",
+      "emoji": "🙂"
+    },
+    {
+      "id": "das-Auge",
+      "word": "Auge",
+      "article": "das",
+      "emoji": "👁️"
+    },
+    {
+      "id": "die-Nase",
+      "word": "Nase",
+      "article": "die",
+      "emoji": "👃"
+    },
+    {
+      "id": "der-Mund",
+      "word": "Mund",
+      "article": "der",
+      "emoji": "👄"
+    },
+    {
+      "id": "das-Ohr",
+      "word": "Ohr",
+      "article": "das",
+      "emoji": "👂"
+    },
+    {
+      "id": "der-Tag",
+      "word": "Tag",
+      "article": "der",
+      "emoji": "📅"
+    },
+    {
+      "id": "die-Nacht",
+      "word": "Nacht",
+      "article": "die",
+      "emoji": "🌃"
+    },
+    {
+      "id": "die-Woche",
+      "word": "Woche",
+      "article": "die",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "das-Jahr",
+      "word": "Jahr",
+      "article": "das",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "die-Zeit",
+      "word": "Zeit",
+      "article": "die",
+      "emoji": "⏰"
+    },
+    {
+      "id": "der-Freund",
+      "word": "Freund",
+      "article": "der",
+      "emoji": "😊"
+    },
+    {
+      "id": "die-Freundin",
+      "word": "Freundin",
+      "article": "die",
+      "emoji": "😊"
+    },
+    {
+      "id": "das-Mädchen",
+      "word": "Mädchen",
+      "article": "das",
+      "emoji": "👧"
+    },
+    {
+      "id": "der-Junge",
+      "word": "Junge",
+      "article": "der",
+      "emoji": "👦"
+    },
+    {
+      "id": "die-Mutter",
+      "word": "Mutter",
+      "article": "die",
+      "emoji": "👩"
+    },
+    {
+      "id": "der-Vater",
+      "word": "Vater",
+      "article": "der",
+      "emoji": "👨"
+    },
+    {
+      "id": "das-Essen",
+      "word": "Essen",
+      "article": "das",
+      "emoji": "🍽️"
+    },
+    {
+      "id": "die-Jacke",
+      "word": "Jacke",
+      "article": "die",
+      "emoji": "🧥"
+    },
+    {
+      "id": "der-Arm",
+      "word": "Arm",
+      "article": "der",
+      "emoji": "💪"
+    },
+    {
+      "id": "der-Arzt",
+      "word": "Arzt",
+      "article": "der",
+      "emoji": "👨‍⚕️"
+    },
+    {
+      "id": "die-Ärztin",
+      "word": "Ärztin",
+      "article": "die",
+      "emoji": "👩‍⚕️"
+    },
+    {
+      "id": "die-Aufgabe",
+      "word": "Aufgabe",
+      "article": "die",
+      "emoji": "📝"
+    },
+    {
+      "id": "der-Ausflug",
+      "word": "Ausflug",
+      "article": "der",
+      "emoji": "🚌"
+    },
+    {
+      "id": "das-Bein",
+      "word": "Bein",
+      "article": "das",
+      "emoji": "🦵"
+    },
+    {
+      "id": "das-Beispiel",
+      "word": "Beispiel",
+      "article": "das",
+      "emoji": "💡"
+    },
+    {
+      "id": "das-Blut",
+      "word": "Blut",
+      "article": "das",
+      "emoji": "🩸"
+    },
+    {
+      "id": "der-Brief",
+      "word": "Brief",
+      "article": "der",
+      "emoji": "✉️"
+    },
+    {
+      "id": "die-Butter",
+      "word": "Butter",
+      "article": "die",
+      "emoji": "🧈"
+    },
+    {
+      "id": "der-Christbaum",
+      "word": "Christbaum",
+      "article": "der",
+      "emoji": "🎄"
+    },
+    {
+      "id": "das-Dorf",
+      "word": "Dorf",
+      "article": "das",
+      "emoji": "🏘️"
+    },
+    {
+      "id": "die-Einladung",
+      "word": "Einladung",
+      "article": "die",
+      "emoji": "💌"
+    },
+    {
+      "id": "die-Fahrt",
+      "word": "Fahrt",
+      "article": "die",
+      "emoji": "🚗"
+    },
+    {
+      "id": "das-Fahrverbot",
+      "word": "Fahrverbot",
+      "article": "das",
+      "emoji": "🚫"
+    },
+    {
+      "id": "die-Familie",
+      "word": "Familie",
+      "article": "die",
+      "emoji": "👨‍👩‍👧‍👦"
+    },
+    {
+      "id": "der-Fernseher",
+      "word": "Fernseher",
+      "article": "der",
+      "emoji": "📺"
+    },
+    {
+      "id": "das-Feuer",
+      "word": "Feuer",
+      "article": "das",
+      "emoji": "🔥"
+    },
+    {
+      "id": "die-Flasche",
+      "word": "Flasche",
+      "article": "die",
+      "emoji": "🍼"
+    },
+    {
+      "id": "die-Frage",
+      "word": "Frage",
+      "article": "die",
+      "emoji": "❓"
+    },
+    {
+      "id": "der-Garten",
+      "word": "Garten",
+      "article": "der",
+      "emoji": "🌳"
+    },
+    {
+      "id": "der-Geburtstag",
+      "word": "Geburtstag",
+      "article": "der",
+      "emoji": "🎂"
+    },
+    {
+      "id": "das-Gemüse",
+      "word": "Gemüse",
+      "article": "das",
+      "emoji": "🥕"
+    },
+    {
+      "id": "das-Geschenk",
+      "word": "Geschenk",
+      "article": "das",
+      "emoji": "🎁"
+    },
+    {
+      "id": "die-Gesundheit",
+      "word": "Gesundheit",
+      "article": "die",
+      "emoji": "❤️"
+    },
+    {
+      "id": "das-Gewitter",
+      "word": "Gewitter",
+      "article": "das",
+      "emoji": "⛈️"
+    },
+    {
+      "id": "die-Gitarre",
+      "word": "Gitarre",
+      "article": "die",
+      "emoji": "🎸"
+    },
+    {
+      "id": "das-Glück",
+      "word": "Glück",
+      "article": "das",
+      "emoji": "🍀"
+    },
+    {
+      "id": "die-Haare",
+      "word": "Haare",
+      "article": "die",
+      "emoji": "💇"
+    },
+    {
+      "id": "das-Handy",
+      "word": "Handy",
+      "article": "das",
+      "emoji": "📱"
+    },
+    {
+      "id": "die-Hexe",
+      "word": "Hexe",
+      "article": "die",
+      "emoji": "🧙‍♀️"
+    },
+    {
+      "id": "die-Hilfe",
+      "word": "Hilfe",
+      "article": "die",
+      "emoji": "🆘"
+    },
+    {
+      "id": "das-Holz",
+      "word": "Holz",
+      "article": "das",
+      "emoji": "🪵"
+    },
+    {
+      "id": "die-Idee",
+      "word": "Idee",
+      "article": "die",
+      "emoji": "💡"
+    },
+    {
+      "id": "die-Jause",
+      "word": "Jause",
+      "article": "die",
+      "emoji": "🥪"
+    },
+    {
+      "id": "die-Krankheit",
+      "word": "Krankheit",
+      "article": "die",
+      "emoji": "🤒"
+    },
+    {
+      "id": "das-Land",
+      "word": "Land",
+      "article": "das",
+      "emoji": "🌍"
+    },
+    {
+      "id": "die-Leute",
+      "word": "Leute",
+      "article": "die",
+      "emoji": "👥"
+    },
+    {
+      "id": "das-Licht",
+      "word": "Licht",
+      "article": "das",
+      "emoji": "💡"
+    },
+    {
+      "id": "das-Lied",
+      "word": "Lied",
+      "article": "das",
+      "emoji": "🎵"
+    },
+    {
+      "id": "das-Loch",
+      "word": "Loch",
+      "article": "das",
+      "emoji": "🕳️"
+    },
+    {
+      "id": "das-Meer",
+      "word": "Meer",
+      "article": "das",
+      "emoji": "🌊"
+    },
+    {
+      "id": "der-Mensch",
+      "word": "Mensch",
+      "article": "der",
+      "emoji": "🧍"
+    },
+    {
+      "id": "der-Meter",
+      "word": "Meter",
+      "article": "der",
+      "emoji": "📏"
+    },
+    {
+      "id": "die-Minute",
+      "word": "Minute",
+      "article": "die",
+      "emoji": "⏱️"
+    },
+    {
+      "id": "die-Mitte",
+      "word": "Mitte",
+      "article": "die",
+      "emoji": "🎯"
+    },
+    {
+      "id": "das-Nest",
+      "word": "Nest",
+      "article": "das",
+      "emoji": "🪺"
+    },
+    {
+      "id": "die-Nummer",
+      "word": "Nummer",
+      "article": "die",
+      "emoji": "🔢"
+    },
+    {
+      "id": "der-Ort",
+      "word": "Ort",
+      "article": "der",
+      "emoji": "📍"
+    },
+    {
+      "id": "das-Paket",
+      "word": "Paket",
+      "article": "das",
+      "emoji": "📦"
+    },
+    {
+      "id": "das-Papier",
+      "word": "Papier",
+      "article": "das",
+      "emoji": "📄"
+    },
+    {
+      "id": "der-Park",
+      "word": "Park",
+      "article": "der",
+      "emoji": "🏞️"
+    },
+    {
+      "id": "die-Pause",
+      "word": "Pause",
+      "article": "die",
+      "emoji": "⏸️"
+    },
+    {
+      "id": "der-Plan",
+      "word": "Plan",
+      "article": "der",
+      "emoji": "🗺️"
+    },
+    {
+      "id": "der-Preis",
+      "word": "Preis",
+      "article": "der",
+      "emoji": "💶"
+    },
+    {
+      "id": "das-Radio",
+      "word": "Radio",
+      "article": "das",
+      "emoji": "📻"
+    },
+    {
+      "id": "die-Rettung",
+      "word": "Rettung",
+      "article": "die",
+      "emoji": "🚑"
+    },
+    {
+      "id": "der-Rücken",
+      "word": "Rücken",
+      "article": "der",
+      "emoji": "🔙"
+    },
+    {
+      "id": "die-Sache",
+      "word": "Sache",
+      "article": "die",
+      "emoji": "🧸"
+    },
+    {
+      "id": "die-Schere",
+      "word": "Schere",
+      "article": "die",
+      "emoji": "✂️"
+    },
+    {
+      "id": "das-Schloss",
+      "word": "Schloss",
+      "article": "das",
+      "emoji": "🏰"
+    },
+    {
+      "id": "das-Schnitzel",
+      "word": "Schnitzel",
+      "article": "das",
+      "emoji": "🍽️"
+    },
+    {
+      "id": "der-Schnupfen",
+      "word": "Schnupfen",
+      "article": "der",
+      "emoji": "🤧"
+    },
+    {
+      "id": "die-Schokolade",
+      "word": "Schokolade",
+      "article": "die",
+      "emoji": "🍫"
+    },
+    {
+      "id": "der-Sessel",
+      "word": "Sessel",
+      "article": "der",
+      "emoji": "🪑"
+    },
+    {
+      "id": "der-Sieger",
+      "word": "Sieger",
+      "article": "der",
+      "emoji": "🏆"
+    },
+    {
+      "id": "die-Spielsachen",
+      "word": "Spielsachen",
+      "article": "die",
+      "emoji": "🧸"
+    },
+    {
+      "id": "der-Sport",
+      "word": "Sport",
+      "article": "der",
+      "emoji": "🏅"
+    },
+    {
+      "id": "die-Stadt",
+      "word": "Stadt",
+      "article": "die",
+      "emoji": "🏙️"
+    },
+    {
+      "id": "das-Stück",
+      "word": "Stück",
+      "article": "das",
+      "emoji": "🧩"
+    },
+    {
+      "id": "der-Supermarkt",
+      "word": "Supermarkt",
+      "article": "der",
+      "emoji": "🛒"
+    },
+    {
+      "id": "die-Tankstelle",
+      "word": "Tankstelle",
+      "article": "die",
+      "emoji": "⛽"
+    },
+    {
+      "id": "das-Telefon",
+      "word": "Telefon",
+      "article": "das",
+      "emoji": "☎️"
+    },
+    {
+      "id": "das-Tier",
+      "word": "Tier",
+      "article": "das",
+      "emoji": "🐾"
+    },
+    {
+      "id": "die-Torte",
+      "word": "Torte",
+      "article": "die",
+      "emoji": "🎂"
+    },
+    {
+      "id": "der-Unfall",
+      "word": "Unfall",
+      "article": "der",
+      "emoji": "🚑"
+    },
+    {
+      "id": "der-Urlaub",
+      "word": "Urlaub",
+      "article": "der",
+      "emoji": "🏖️"
+    },
+    {
+      "id": "der-Verkehr",
+      "word": "Verkehr",
+      "article": "der",
+      "emoji": "🚦"
+    },
+    {
+      "id": "das-Video",
+      "word": "Video",
+      "article": "das",
+      "emoji": "🎥"
+    },
+    {
+      "id": "der-Weg",
+      "word": "Weg",
+      "article": "der",
+      "emoji": "🛤️"
+    },
+    {
+      "id": "die-Wiese",
+      "word": "Wiese",
+      "article": "die",
+      "emoji": "🌾"
+    },
+    {
+      "id": "der-Witz",
+      "word": "Witz",
+      "article": "der",
+      "emoji": "😂"
+    },
+    {
+      "id": "die-Wohnung",
+      "word": "Wohnung",
+      "article": "die",
+      "emoji": "🏠"
+    },
+    {
+      "id": "das-Zimmer",
+      "word": "Zimmer",
+      "article": "das",
+      "emoji": "🛏️"
+    },
+    {
+      "id": "der-Zucker",
+      "word": "Zucker",
+      "article": "der",
+      "emoji": "🍚"
+    },
+    {
+      "id": "das-Zuckerl",
+      "word": "Zuckerl",
+      "article": "das",
+      "emoji": "🍬"
+    },
+    {
+      "id": "der-Zug",
+      "word": "Zug",
+      "article": "der",
+      "emoji": "🚆"
+    },
+    {
+      "id": "das-Abenteuer",
+      "word": "Abenteuer",
+      "article": "das",
+      "emoji": "🧭"
+    },
+    {
+      "id": "der-Abfall",
+      "word": "Abfall",
+      "article": "der",
+      "emoji": "🗑️"
+    },
+    {
+      "id": "der-Abfallkorb",
+      "word": "Abfallkorb",
+      "article": "der",
+      "emoji": "🗑️"
+    },
+    {
+      "id": "der-Adler",
+      "word": "Adler",
+      "article": "der",
+      "emoji": "🦅"
+    },
+    {
+      "id": "der-Advent",
+      "word": "Advent",
+      "article": "der",
+      "emoji": "🕯️"
+    },
+    {
+      "id": "die-Adventfeier",
+      "word": "Adventfeier",
+      "article": "die",
+      "emoji": "🕯️"
+    },
+    {
+      "id": "der-Affe",
+      "word": "Affe",
+      "article": "der",
+      "emoji": "🐒"
+    },
+    {
+      "id": "die-Angst",
+      "word": "Angst",
+      "article": "die",
+      "emoji": "😨"
+    },
+    {
+      "id": "der-April",
+      "word": "April",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "die-Arbeit",
+      "word": "Arbeit",
+      "article": "die",
+      "emoji": "💼"
+    },
+    {
+      "id": "der-Artist",
+      "word": "Artist",
+      "article": "der",
+      "emoji": "🤹"
+    },
+    {
+      "id": "das-Arztzimmer",
+      "word": "Arztzimmer",
+      "article": "das",
+      "emoji": "🏥"
+    },
+    {
+      "id": "der-Ast",
+      "word": "Ast",
+      "article": "der",
+      "emoji": "🌿"
+    },
+    {
+      "id": "der-Abend",
+      "word": "Abend",
+      "article": "der",
+      "emoji": "🌆"
+    },
+    {
+      "id": "der-August",
+      "word": "August",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "die-Autorennbahn",
+      "word": "Autorennbahn",
+      "article": "die",
+      "emoji": "🏎️"
+    },
+    {
+      "id": "das-Baby",
+      "word": "Baby",
+      "article": "das",
+      "emoji": "👶"
+    },
+    {
+      "id": "der-Bach",
+      "word": "Bach",
+      "article": "der",
+      "emoji": "💧"
+    },
+    {
+      "id": "die-Badewanne",
+      "word": "Badewanne",
+      "article": "die",
+      "emoji": "🛁"
+    },
+    {
+      "id": "das-Badezimmer",
+      "word": "Badezimmer",
+      "article": "das",
+      "emoji": "🛁"
+    },
+    {
+      "id": "die-Bank",
+      "word": "Bank",
+      "article": "die",
+      "emoji": "🏦"
+    },
+    {
+      "id": "der-Bär",
+      "word": "Bär",
+      "article": "der",
+      "emoji": "🐻"
+    },
+    {
+      "id": "der-Bauch",
+      "word": "Bauch",
+      "article": "der",
+      "emoji": "🤰"
+    },
+    {
+      "id": "das-Bauchweh",
+      "word": "Bauchweh",
+      "article": "das",
+      "emoji": "🤕"
+    },
+    {
+      "id": "der-Bauernhof",
+      "word": "Bauernhof",
+      "article": "der",
+      "emoji": "🚜"
+    },
+    {
+      "id": "das-Baumhaus",
+      "word": "Baumhaus",
+      "article": "das",
+      "emoji": "🏠"
+    },
+    {
+      "id": "der-Berg",
+      "word": "Berg",
+      "article": "der",
+      "emoji": "⛰️"
+    },
+    {
+      "id": "der-Besen",
+      "word": "Besen",
+      "article": "der",
+      "emoji": "🧹"
+    },
+    {
+      "id": "der-Besuch",
+      "word": "Besuch",
+      "article": "der",
+      "emoji": "👥"
+    },
+    {
+      "id": "die-Beule",
+      "word": "Beule",
+      "article": "die",
+      "emoji": "🤕"
+    },
+    {
+      "id": "der-Biber",
+      "word": "Biber",
+      "article": "der",
+      "emoji": "🦫"
+    },
+    {
+      "id": "die-Bibliothek",
+      "word": "Bibliothek",
+      "article": "die",
+      "emoji": "📚"
+    },
+    {
+      "id": "die-Biene",
+      "word": "Biene",
+      "article": "die",
+      "emoji": "🐝"
+    },
+    {
+      "id": "das-Bild",
+      "word": "Bild",
+      "article": "das",
+      "emoji": "🖼️"
+    },
+    {
+      "id": "der-Bilderrahmen",
+      "word": "Bilderrahmen",
+      "article": "der",
+      "emoji": "🖼️"
+    },
+    {
+      "id": "die-Bindung",
+      "word": "Bindung",
+      "article": "die",
+      "emoji": "🔗"
+    },
+    {
+      "id": "die-Biotonne",
+      "word": "Biotonne",
+      "article": "die",
+      "emoji": "♻️"
+    },
+    {
+      "id": "das-Biotop",
+      "word": "Biotop",
+      "article": "das",
+      "emoji": "🌿"
+    },
+    {
+      "id": "die-Birne",
+      "word": "Birne",
+      "article": "die",
+      "emoji": "🍐"
+    },
+    {
+      "id": "das-Blatt",
+      "word": "Blatt",
+      "article": "das",
+      "emoji": "🍃"
+    },
+    {
+      "id": "das-Bleigießen",
+      "word": "Bleigießen",
+      "article": "das",
+      "emoji": "🕯️"
+    },
+    {
+      "id": "der-Bleistift",
+      "word": "Bleistift",
+      "article": "der",
+      "emoji": "✏️"
+    },
+    {
+      "id": "der-Blitz",
+      "word": "Blitz",
+      "article": "der",
+      "emoji": "⚡"
+    },
+    {
+      "id": "die-Blockflöte",
+      "word": "Blockflöte",
+      "article": "die",
+      "emoji": "🎶"
+    },
+    {
+      "id": "der-Blumenstrauß",
+      "word": "Blumenstrauß",
+      "article": "der",
+      "emoji": "💐"
+    },
+    {
+      "id": "der-Boden",
+      "word": "Boden",
+      "article": "der",
+      "emoji": "🌍"
+    },
+    {
+      "id": "die-Brille",
+      "word": "Brille",
+      "article": "die",
+      "emoji": "👓"
+    },
+    {
+      "id": "die-Brücke",
+      "word": "Brücke",
+      "article": "die",
+      "emoji": "🌉"
+    },
+    {
+      "id": "der-Bruder",
+      "word": "Bruder",
+      "article": "der",
+      "emoji": "👦"
+    },
+    {
+      "id": "der-Brunnen",
+      "word": "Brunnen",
+      "article": "der",
+      "emoji": "⛲"
+    },
+    {
+      "id": "der-Bub",
+      "word": "Bub",
+      "article": "der",
+      "emoji": "👦"
+    },
+    {
+      "id": "die-Bücherei",
+      "word": "Bücherei",
+      "article": "die",
+      "emoji": "📚"
+    },
+    {
+      "id": "die-Burg",
+      "word": "Burg",
+      "article": "die",
+      "emoji": "🏰"
+    },
+    {
+      "id": "das-Büro",
+      "word": "Büro",
+      "article": "das",
+      "emoji": "🏢"
+    },
+    {
+      "id": "der-Bus",
+      "word": "Bus",
+      "article": "der",
+      "emoji": "🚌"
+    },
+    {
+      "id": "der-Cousin",
+      "word": "Cousin",
+      "article": "der",
+      "emoji": "👦"
+    },
+    {
+      "id": "der-Cowboyhut",
+      "word": "Cowboyhut",
+      "article": "der",
+      "emoji": "🤠"
+    },
+    {
+      "id": "das-Dach",
+      "word": "Dach",
+      "article": "das",
+      "emoji": "🏠"
+    },
+    {
+      "id": "der-Dachs",
+      "word": "Dachs",
+      "article": "der",
+      "emoji": "🦡"
+    },
+    {
+      "id": "der-Dackel",
+      "word": "Dackel",
+      "article": "der",
+      "emoji": "🐕"
+    },
+    {
+      "id": "der-Daumen",
+      "word": "Daumen",
+      "article": "der",
+      "emoji": "👍"
+    },
+    {
+      "id": "die-Decke",
+      "word": "Decke",
+      "article": "die",
+      "emoji": "🧺"
+    },
+    {
+      "id": "das-Denkmal",
+      "word": "Denkmal",
+      "article": "das",
+      "emoji": "🗿"
+    },
+    {
+      "id": "der-Dezember",
+      "word": "Dezember",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "der-Dienstag",
+      "word": "Dienstag",
+      "article": "der",
+      "emoji": "📅"
+    },
+    {
+      "id": "der-Dinosaurier",
+      "word": "Dinosaurier",
+      "article": "der",
+      "emoji": "🦖"
+    },
+    {
+      "id": "die-Direktion",
+      "word": "Direktion",
+      "article": "die",
+      "emoji": "🏫"
+    },
+    {
+      "id": "der-Direktor",
+      "word": "Direktor",
+      "article": "der",
+      "emoji": "👨‍🏫"
+    },
+    {
+      "id": "die-Direktorin",
+      "word": "Direktorin",
+      "article": "die",
+      "emoji": "👩‍🏫"
+    },
+    {
+      "id": "der-Discman",
+      "word": "Discman",
+      "article": "der",
+      "emoji": "💿"
+    },
+    {
+      "id": "der-Doktor",
+      "word": "Doktor",
+      "article": "der",
+      "emoji": "👨‍⚕️"
+    },
+    {
+      "id": "die-Doktorin",
+      "word": "Doktorin",
+      "article": "die",
+      "emoji": "👩‍⚕️"
+    },
+    {
+      "id": "der-Dom",
+      "word": "Dom",
+      "article": "der",
+      "emoji": "⛪"
+    },
+    {
+      "id": "der-Donnerstag",
+      "word": "Donnerstag",
+      "article": "der",
+      "emoji": "📅"
+    },
+    {
+      "id": "der-Drache",
+      "word": "Drache",
+      "article": "der",
+      "emoji": "🐉"
+    },
+    {
+      "id": "der-Durst",
+      "word": "Durst",
+      "article": "der",
+      "emoji": "🥤"
+    },
+    {
+      "id": "die-DVD",
+      "word": "DVD",
+      "article": "die",
+      "emoji": "💿"
+    },
+    {
+      "id": "die-CD",
+      "word": "CD",
+      "article": "die",
+      "emoji": "💿"
+    },
+    {
+      "id": "der-Cent",
+      "word": "Cent",
+      "article": "der",
+      "emoji": "🪙"
+    },
+    {
+      "id": "die-Chance",
+      "word": "Chance",
+      "article": "die",
+      "emoji": "🍀"
+    },
+    {
+      "id": "das-Christkind",
+      "word": "Christkind",
+      "article": "das",
+      "emoji": "🎄"
+    },
+    {
+      "id": "der-Clown",
+      "word": "Clown",
+      "article": "der",
+      "emoji": "🤡"
+    },
+    {
+      "id": "die-Cola",
+      "word": "Cola",
+      "article": "die",
+      "emoji": "🥤"
+    },
+    {
+      "id": "der-Computer",
+      "word": "Computer",
+      "article": "der",
+      "emoji": "💻"
+    },
+    {
+      "id": "der-Edelstein",
+      "word": "Edelstein",
+      "article": "der",
+      "emoji": "💎"
+    },
+    {
+      "id": "das-Ei",
+      "word": "Ei",
+      "article": "das",
+      "emoji": "🥚"
+    },
+    {
+      "id": "das-Eichhörnchen",
+      "word": "Eichhörnchen",
+      "article": "das",
+      "emoji": "🐿️"
+    },
+    {
+      "id": "das-Eis",
+      "word": "Eis",
+      "article": "das",
+      "emoji": "🍦"
+    },
+    {
+      "id": "die-Eisenbahn",
+      "word": "Eisenbahn",
+      "article": "die",
+      "emoji": "🚂"
+    },
+    {
+      "id": "der-Eislaufplatz",
+      "word": "Eislaufplatz",
+      "article": "der",
+      "emoji": "⛸️"
+    },
+    {
+      "id": "der-Eisregen",
+      "word": "Eisregen",
+      "article": "der",
+      "emoji": "🌧️"
+    },
+    {
+      "id": "der-Elefant",
+      "word": "Elefant",
+      "article": "der",
+      "emoji": "🐘"
+    },
+    {
+      "id": "die-Eltern",
+      "word": "Eltern",
+      "article": "die",
+      "emoji": "👨‍👩‍👧"
+    },
+    {
+      "id": "das-Ende",
+      "word": "Ende",
+      "article": "das",
+      "emoji": "🏁"
+    },
+    {
+      "id": "die-Ente",
+      "word": "Ente",
+      "article": "die",
+      "emoji": "🦆"
+    },
+    {
+      "id": "die-Erde",
+      "word": "Erde",
+      "article": "die",
+      "emoji": "🌍"
+    },
+    {
+      "id": "der-Esel",
+      "word": "Esel",
+      "article": "der",
+      "emoji": "🐴"
+    },
+    {
+      "id": "das-Esszimmer",
+      "word": "Esszimmer",
+      "article": "das",
+      "emoji": "🍽️"
+    },
+    {
+      "id": "das-Fahrrad",
+      "word": "Fahrrad",
+      "article": "das",
+      "emoji": "🚲"
+    },
+    {
+      "id": "die-Farbe",
+      "word": "Farbe",
+      "article": "die",
+      "emoji": "🎨"
+    },
+    {
+      "id": "der-Fasching",
+      "word": "Fasching",
+      "article": "der",
+      "emoji": "🎭"
+    },
+    {
+      "id": "das-Faschingsfest",
+      "word": "Faschingsfest",
+      "article": "das",
+      "emoji": "🎭"
+    },
+    {
+      "id": "das-Faxgerät",
+      "word": "Faxgerät",
+      "article": "das",
+      "emoji": "📠"
+    },
+    {
+      "id": "der-Februar",
+      "word": "Februar",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "die-Feder",
+      "word": "Feder",
+      "article": "die",
+      "emoji": "🪶"
+    },
+    {
+      "id": "der-Federschmuck",
+      "word": "Federschmuck",
+      "article": "der",
+      "emoji": "🪶"
+    },
+    {
+      "id": "das-Fell",
+      "word": "Fell",
+      "article": "das",
+      "emoji": "🐾"
+    },
+    {
+      "id": "die-Ferien",
+      "word": "Ferien",
+      "article": "die",
+      "emoji": "🏖️"
+    },
+    {
+      "id": "das-Fest",
+      "word": "Fest",
+      "article": "das",
+      "emoji": "🎉"
+    },
+    {
+      "id": "die-Feuerwehr",
+      "word": "Feuerwehr",
+      "article": "die",
+      "emoji": "🚒"
+    },
+    {
+      "id": "das-Feuerwerk",
+      "word": "Feuerwerk",
+      "article": "das",
+      "emoji": "🎆"
+    },
+    {
+      "id": "das-Fieber",
+      "word": "Fieber",
+      "article": "das",
+      "emoji": "🤒"
+    },
+    {
+      "id": "der-Filialleiter",
+      "word": "Filialleiter",
+      "article": "der",
+      "emoji": "👨‍💼"
+    },
+    {
+      "id": "die-Filialleiterin",
+      "word": "Filialleiterin",
+      "article": "die",
+      "emoji": "👩‍💼"
+    },
+    {
+      "id": "der-Film",
+      "word": "Film",
+      "article": "der",
+      "emoji": "🎬"
+    },
+    {
+      "id": "der-Finger",
+      "word": "Finger",
+      "article": "der",
+      "emoji": "☝️"
+    },
+    {
+      "id": "das-Fleisch",
+      "word": "Fleisch",
+      "article": "das",
+      "emoji": "🥩"
+    },
+    {
+      "id": "die-Flöte",
+      "word": "Flöte",
+      "article": "die",
+      "emoji": "🎶"
+    },
+    {
+      "id": "der-Flughafen",
+      "word": "Flughafen",
+      "article": "der",
+      "emoji": "✈️"
+    },
+    {
+      "id": "das-Flugzeug",
+      "word": "Flugzeug",
+      "article": "das",
+      "emoji": "✈️"
+    },
+    {
+      "id": "der-Fluss",
+      "word": "Fluss",
+      "article": "der",
+      "emoji": "🏞️"
+    },
+    {
+      "id": "der-Freitag",
+      "word": "Freitag",
+      "article": "der",
+      "emoji": "📅"
+    },
+    {
+      "id": "das-Freundschaftsband",
+      "word": "Freundschaftsband",
+      "article": "das",
+      "emoji": "🎗️"
+    },
+    {
+      "id": "der-Friedhof",
+      "word": "Friedhof",
+      "article": "der",
+      "emoji": "🪦"
+    },
+    {
+      "id": "der-Frost",
+      "word": "Frost",
+      "article": "der",
+      "emoji": "❄️"
+    },
+    {
+      "id": "der-Früchtetee",
+      "word": "Früchtetee",
+      "article": "der",
+      "emoji": "🫖"
+    },
+    {
+      "id": "die-Früh",
+      "word": "Früh",
+      "article": "die",
+      "emoji": "🌅"
+    },
+    {
+      "id": "der-Frühling",
+      "word": "Frühling",
+      "article": "der",
+      "emoji": "🌷"
+    },
+    {
+      "id": "der-Fuchs",
+      "word": "Fuchs",
+      "article": "der",
+      "emoji": "🦊"
+    },
+    {
+      "id": "die-Füllfeder",
+      "word": "Füllfeder",
+      "article": "die",
+      "emoji": "🖋️"
+    },
+    {
+      "id": "der-Fußball",
+      "word": "Fußball",
+      "article": "der",
+      "emoji": "⚽"
+    },
+    {
+      "id": "der-Fußballplatz",
+      "word": "Fußballplatz",
+      "article": "der",
+      "emoji": "⚽"
+    },
+    {
+      "id": "der-Gefrierpunkt",
+      "word": "Gefrierpunkt",
+      "article": "der",
+      "emoji": "🧊"
+    },
+    {
+      "id": "das-Gefühl",
+      "word": "Gefühl",
+      "article": "das",
+      "emoji": "💭"
+    },
+    {
+      "id": "der-Geheimgang",
+      "word": "Geheimgang",
+      "article": "der",
+      "emoji": "🚪"
+    },
+    {
+      "id": "die-Geige",
+      "word": "Geige",
+      "article": "die",
+      "emoji": "🎻"
+    },
+    {
+      "id": "der-Geist",
+      "word": "Geist",
+      "article": "der",
+      "emoji": "👻"
+    },
+    {
+      "id": "das-Geld",
+      "word": "Geld",
+      "article": "das",
+      "emoji": "💶"
+    },
+    {
+      "id": "das-Geschäft",
+      "word": "Geschäft",
+      "article": "das",
+      "emoji": "🏪"
+    },
+    {
+      "id": "die-Geschichte",
+      "word": "Geschichte",
+      "article": "die",
+      "emoji": "📚"
+    },
+    {
+      "id": "der-Geschirrspüler",
+      "word": "Geschirrspüler",
+      "article": "der",
+      "emoji": "🍽️"
+    },
+    {
+      "id": "die-Gämse",
+      "word": "Gämse",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Gans",
+      "word": "Gans",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Garage",
+      "word": "Garage",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Gasse",
+      "word": "Gasse",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Gasthaus",
+      "word": "Gasthaus",
+      "article": "das",
+      "emoji": "🌿"
+    },
+    {
+      "id": "die-Geburtstagsparty",
+      "word": "Geburtstagsparty",
+      "article": "die",
+      "emoji": "📅"
+    },
+    {
+      "id": "die-Geburtstagspartys",
+      "word": "Geburtstagspartys",
+      "article": "die",
+      "emoji": "📅"
+    },
+    {
+      "id": "das-Gedicht",
+      "word": "Gedicht",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Grippe",
+      "word": "Grippe",
+      "article": "die",
+      "emoji": "🤧"
+    },
+    {
+      "id": "die-Großeltern",
+      "word": "Großeltern",
+      "article": "die",
+      "emoji": "👵"
+    },
+    {
+      "id": "der-Gürtel",
+      "word": "Gürtel",
+      "article": "der",
+      "emoji": "👖"
+    },
+    {
+      "id": "der-Gutschein",
+      "word": "Gutschein",
+      "article": "der",
+      "emoji": "🎟️"
+    },
+    {
+      "id": "das-Gesicht",
+      "word": "Gesicht",
+      "article": "das",
+      "emoji": "🙂"
+    },
+    {
+      "id": "das-Gespenst",
+      "word": "Gespenst",
+      "article": "das",
+      "emoji": "👻"
+    },
+    {
+      "id": "der-Gips",
+      "word": "Gips",
+      "article": "der",
+      "emoji": "🩹"
+    },
+    {
+      "id": "das-Glas",
+      "word": "Glas",
+      "article": "das",
+      "emoji": "🥛"
+    },
+    {
+      "id": "das-Glücksschwein",
+      "word": "Glücksschwein",
+      "article": "das",
+      "emoji": "🐷"
+    },
+    {
+      "id": "die-Glücksschweine",
+      "word": "Glücksschweine",
+      "article": "die",
+      "emoji": "🥚"
+    },
+    {
+      "id": "das-Gold",
+      "word": "Gold",
+      "article": "das",
+      "emoji": "🥇"
+    },
+    {
+      "id": "das-Gras",
+      "word": "Gras",
+      "article": "das",
+      "emoji": "🌱"
+    },
+    {
+      "id": "der-Hagel",
+      "word": "Hagel",
+      "article": "der",
+      "emoji": "🌨️"
+    },
+    {
+      "id": "der-Hai",
+      "word": "Hai",
+      "article": "der",
+      "emoji": "🦈"
+    },
+    {
+      "id": "das-Hallenbad",
+      "word": "Hallenbad",
+      "article": "das",
+      "emoji": "🏊"
+    },
+    {
+      "id": "der-Hals",
+      "word": "Hals",
+      "article": "der",
+      "emoji": "🧣"
+    },
+    {
+      "id": "der-Hamburger",
+      "word": "Hamburger",
+      "article": "der",
+      "emoji": "🍔"
+    },
+    {
+      "id": "der-Hamster",
+      "word": "Hamster",
+      "article": "der",
+      "emoji": "🐹"
+    },
+    {
+      "id": "die-Handschuhe",
+      "word": "Handschuhe",
+      "article": "die",
+      "emoji": "🧤"
+    },
+    {
+      "id": "der-Hase",
+      "word": "Hase",
+      "article": "der",
+      "emoji": "🐰"
+    },
+    {
+      "id": "die-Haube",
+      "word": "Haube",
+      "article": "die",
+      "emoji": "🧢"
+    },
+    {
+      "id": "der-Häuptling",
+      "word": "Häuptling",
+      "article": "der",
+      "emoji": "🪶"
+    },
+    {
+      "id": "das-Heft",
+      "word": "Heft",
+      "article": "das",
+      "emoji": "📓"
+    },
+    {
+      "id": "das-Heimatmuseum",
+      "word": "Heimatmuseum",
+      "article": "das",
+      "emoji": "🏛️"
+    },
+    {
+      "id": "die-Heimatmuseen",
+      "word": "Heimatmuseen",
+      "article": "die",
+      "emoji": "🥚"
+    },
+    {
+      "id": "der-Herbst",
+      "word": "Herbst",
+      "article": "der",
+      "emoji": "🍂"
+    },
+    {
+      "id": "der-Herr",
+      "word": "Herr",
+      "article": "der",
+      "emoji": "👨"
+    },
+    {
+      "id": "die-Hitze",
+      "word": "Hitze",
+      "article": "die",
+      "emoji": "🔥"
+    },
+    {
+      "id": "der-Kaugummi",
+      "word": "Kaugummi",
+      "article": "der",
+      "emoji": "🍬"
+    },
+    {
+      "id": "das-Keks",
+      "word": "Keks",
+      "article": "das",
+      "emoji": "🍪"
+    },
+    {
+      "id": "der-Keller",
+      "word": "Keller",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Kerze",
+      "word": "Kerze",
+      "article": "die",
+      "emoji": "🕯️"
+    },
+    {
+      "id": "das-Ketchup",
+      "word": "Ketchup",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Kinderfest",
+      "word": "Kinderfest",
+      "article": "das",
+      "emoji": "🎉"
+    },
+    {
+      "id": "das-Kinderzimmer",
+      "word": "Kinderzimmer",
+      "article": "das",
+      "emoji": "🧒"
+    },
+    {
+      "id": "das-Kino",
+      "word": "Kino",
+      "article": "das",
+      "emoji": "🎬"
+    },
+    {
+      "id": "die-Kirche",
+      "word": "Kirche",
+      "article": "die",
+      "emoji": "⛪"
+    },
+    {
+      "id": "die-Klasse",
+      "word": "Klasse",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Klavier",
+      "word": "Klavier",
+      "article": "das",
+      "emoji": "🎹"
+    },
+    {
+      "id": "das-Kleeblatt",
+      "word": "Kleeblatt",
+      "article": "das",
+      "emoji": "🍀"
+    },
+    {
+      "id": "der-Knallfrosch",
+      "word": "Knallfrosch",
+      "article": "der",
+      "emoji": "🎆"
+    },
+    {
+      "id": "der-Kobold",
+      "word": "Kobold",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Kohlrabi",
+      "word": "Kohlrabi",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-König",
+      "word": "König",
+      "article": "der",
+      "emoji": "🤴"
+    },
+    {
+      "id": "die-Königin",
+      "word": "Königin",
+      "article": "die",
+      "emoji": "👸"
+    },
+    {
+      "id": "der-Kracher",
+      "word": "Kracher",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Kran",
+      "word": "Kran",
+      "article": "der",
+      "emoji": "🏥"
+    },
+    {
+      "id": "das-Krankenhaus",
+      "word": "Krankenhaus",
+      "article": "das",
+      "emoji": "🏥"
+    },
+    {
+      "id": "der-Krapfen",
+      "word": "Krapfen",
+      "article": "der",
+      "emoji": "🍩"
+    },
+    {
+      "id": "die-Krippe",
+      "word": "Krippe",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Krokodil",
+      "word": "Krokodil",
+      "article": "das",
+      "emoji": "🐊"
+    },
+    {
+      "id": "die-Krone",
+      "word": "Krone",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Kübel",
+      "word": "Kübel",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Küche",
+      "word": "Küche",
+      "article": "die",
+      "emoji": "🍳"
+    },
+    {
+      "id": "der-Kuchen",
+      "word": "Kuchen",
+      "article": "der",
+      "emoji": "🍰"
+    },
+    {
+      "id": "die-Kugel",
+      "word": "Kugel",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Kuh",
+      "word": "Kuh",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Kunde",
+      "word": "Kunde",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Kundin",
+      "word": "Kundin",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Kuscheltier",
+      "word": "Kuscheltier",
+      "article": "das",
+      "emoji": "🧸"
+    },
+    {
+      "id": "die-Kusine",
+      "word": "Kusine",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Höhle",
+      "word": "Höhle",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Honig",
+      "word": "Honig",
+      "article": "der",
+      "emoji": "🍯"
+    },
+    {
+      "id": "die-Hose",
+      "word": "Hose",
+      "article": "die",
+      "emoji": "👖"
+    },
+    {
+      "id": "die-Hummel",
+      "word": "Hummel",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Hunger",
+      "word": "Hunger",
+      "article": "der",
+      "emoji": "🍽️"
+    },
+    {
+      "id": "der-Husten",
+      "word": "Husten",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Hut",
+      "word": "Hut",
+      "article": "der",
+      "emoji": "🎩"
+    },
+    {
+      "id": "der-Igel",
+      "word": "Igel",
+      "article": "der",
+      "emoji": "🦔"
+    },
+    {
+      "id": "der-Indianer",
+      "word": "Indianer",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Internet",
+      "word": "Internet",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Jänner",
+      "word": "Jänner",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "die-Jeans",
+      "word": "Jeans",
+      "article": "die",
+      "emoji": "👖"
+    },
+    {
+      "id": "das-Joghurt",
+      "word": "Joghurt",
+      "article": "das",
+      "emoji": "🥣"
+    },
+    {
+      "id": "der-Juli",
+      "word": "Juli",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "der-Juni",
+      "word": "Juni",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "der-Kaffee",
+      "word": "Kaffee",
+      "article": "der",
+      "emoji": "☕"
+    },
+    {
+      "id": "der-Kakao",
+      "word": "Kakao",
+      "article": "der",
+      "emoji": "☕"
+    },
+    {
+      "id": "die-Kälte",
+      "word": "Kälte",
+      "article": "die",
+      "emoji": "🥶"
+    },
+    {
+      "id": "die-Kamerafrau",
+      "word": "Kamerafrau",
+      "article": "die",
+      "emoji": "👩"
+    },
+    {
+      "id": "der-Kameramann",
+      "word": "Kameramann",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Kanarienvogel",
+      "word": "Kanarienvogel",
+      "article": "der",
+      "emoji": "🐦"
+    },
+    {
+      "id": "das-Kaninchen",
+      "word": "Kaninchen",
+      "article": "das",
+      "emoji": "🐰"
+    },
+    {
+      "id": "die-Kappe",
+      "word": "Kappe",
+      "article": "die",
+      "emoji": "🧢"
+    },
+    {
+      "id": "die-Karotte",
+      "word": "Karotte",
+      "article": "die",
+      "emoji": "🥕"
+    },
+    {
+      "id": "der-Käse",
+      "word": "Käse",
+      "article": "der",
+      "emoji": "🧀"
+    },
+    {
+      "id": "der-Kasten",
+      "word": "Kasten",
+      "article": "der",
+      "emoji": "🗄️"
+    },
+    {
+      "id": "der-Laden",
+      "word": "Laden",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Mai",
+      "word": "Mai",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Mama",
+      "word": "Mama",
+      "article": "die",
+      "emoji": "👩"
+    },
+    {
+      "id": "der-Manager",
+      "word": "Manager",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Managerin",
+      "word": "Managerin",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Mandarine",
+      "word": "Mandarine",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Manege",
+      "word": "Manege",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Mantel",
+      "word": "Mantel",
+      "article": "der",
+      "emoji": "🧥"
+    },
+    {
+      "id": "die-Mappe",
+      "word": "Mappe",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Märchen",
+      "word": "Märchen",
+      "article": "das",
+      "emoji": "📖"
+    },
+    {
+      "id": "die-Marmelade",
+      "word": "Marmelade",
+      "article": "die",
+      "emoji": "🍯"
+    },
+    {
+      "id": "der-März",
+      "word": "März",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "das-Marzipan",
+      "word": "Marzipan",
+      "article": "das",
+      "emoji": "🍬"
+    },
+    {
+      "id": "das-Marzipanschwein",
+      "word": "Marzipanschwein",
+      "article": "das",
+      "emoji": "🥚"
+    },
+    {
+      "id": "die-Marzipanschweine",
+      "word": "Marzipanschweine",
+      "article": "die",
+      "emoji": "🥚"
+    },
+    {
+      "id": "die-Masche",
+      "word": "Masche",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Masern",
+      "word": "Masern",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Maske",
+      "word": "Maske",
+      "article": "die",
+      "emoji": "🎭"
+    },
+    {
+      "id": "die-Matte",
+      "word": "Matte",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Maus",
+      "word": "Maus",
+      "article": "die",
+      "emoji": "🐭"
+    },
+    {
+      "id": "die-Medizin",
+      "word": "Medizin",
+      "article": "die",
+      "emoji": "💊"
+    },
+    {
+      "id": "das-Meerschweinchen",
+      "word": "Meerschweinchen",
+      "article": "das",
+      "emoji": "🥚"
+    },
+    {
+      "id": "das-Messer",
+      "word": "Messer",
+      "article": "das",
+      "emoji": "🔪"
+    },
+    {
+      "id": "der-Mist",
+      "word": "Mist",
+      "article": "der",
+      "emoji": "🗑️"
+    },
+    {
+      "id": "der-Mittag",
+      "word": "Mittag",
+      "article": "der",
+      "emoji": "🕛"
+    },
+    {
+      "id": "die-Mitternacht",
+      "word": "Mitternacht",
+      "article": "die",
+      "emoji": "🌙"
+    },
+    {
+      "id": "der-Mittwoch",
+      "word": "Mittwoch",
+      "article": "der",
+      "emoji": "📅"
+    },
+    {
+      "id": "die-Mobilbox",
+      "word": "Mobilbox",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Monat",
+      "word": "Monat",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Montag",
+      "word": "Montag",
+      "article": "der",
+      "emoji": "📅"
+    },
+    {
+      "id": "der-Müll",
+      "word": "Müll",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Müllabfuhr",
+      "word": "Müllabfuhr",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Muschel",
+      "word": "Muschel",
+      "article": "die",
+      "emoji": "🐚"
+    },
+    {
+      "id": "das-Museum",
+      "word": "Museum",
+      "article": "das",
+      "emoji": "🏛️"
+    },
+    {
+      "id": "die-Musik",
+      "word": "Musik",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Müsli",
+      "word": "Müsli",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Lasso",
+      "word": "Lasso",
+      "article": "das",
+      "emoji": "🤠"
+    },
+    {
+      "id": "der-Lehrer",
+      "word": "Lehrer",
+      "article": "der",
+      "emoji": "👨‍🏫"
+    },
+    {
+      "id": "die-Lehrerin",
+      "word": "Lehrerin",
+      "article": "die",
+      "emoji": "👩‍🏫"
+    },
+    {
+      "id": "der-Lehrling",
+      "word": "Lehrling",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Leibchen",
+      "word": "Leibchen",
+      "article": "das",
+      "emoji": "👕"
+    },
+    {
+      "id": "der-Leopard",
+      "word": "Leopard",
+      "article": "der",
+      "emoji": "👴"
+    },
+    {
+      "id": "die-Leseecke",
+      "word": "Leseecke",
+      "article": "die",
+      "emoji": "湖"
+    },
+    {
+      "id": "die-Lieblingsspeise",
+      "word": "Lieblingsspeise",
+      "article": "die",
+      "emoji": "🥚"
+    },
+    {
+      "id": "die-Lieblingsspeisen",
+      "word": "Lieblingsspeisen",
+      "article": "die",
+      "emoji": "🥚"
+    },
+    {
+      "id": "der-Liegegips",
+      "word": "Liegegips",
+      "article": "der",
+      "emoji": "🩹"
+    },
+    {
+      "id": "der-Lippenstift",
+      "word": "Lippenstift",
+      "article": "der",
+      "emoji": "👄"
+    },
+    {
+      "id": "der-Lkw",
+      "word": "Lkw",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Löwe",
+      "word": "Löwe",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Luftballon",
+      "word": "Luftballon",
+      "article": "der",
+      "emoji": "🎈"
+    },
+    {
+      "id": "der-Muttertag",
+      "word": "Muttertag",
+      "article": "der",
+      "emoji": "💐"
+    },
+    {
+      "id": "die-Mütze",
+      "word": "Mütze",
+      "article": "die",
+      "emoji": "🧢"
+    },
+    {
+      "id": "die-Nachricht",
+      "word": "Nachricht",
+      "article": "die",
+      "emoji": "✉️"
+    },
+    {
+      "id": "der-N",
+      "word": "N",
+      "article": "der",
+      "emoji": "🌆"
+    },
+    {
+      "id": "das-nächste Mal",
+      "word": "nächste Mal",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Name",
+      "word": "Name",
+      "article": "der",
+      "emoji": "🔤"
+    },
+    {
+      "id": "das-Nashorn",
+      "word": "Nashorn",
+      "article": "das",
+      "emoji": "🦏"
+    },
+    {
+      "id": "der-Nebel",
+      "word": "Nebel",
+      "article": "der",
+      "emoji": "🌫️"
+    },
+    {
+      "id": "der-Nikolaus",
+      "word": "Nikolaus",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Nixe",
+      "word": "Nixe",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Notizblock",
+      "word": "Notizblock",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Notizzettel",
+      "word": "Notizzettel",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-November",
+      "word": "November",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "die-Nuss",
+      "word": "Nuss",
+      "article": "die",
+      "emoji": "🥜"
+    },
+    {
+      "id": "der-Oktober",
+      "word": "Oktober",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "die-Oma",
+      "word": "Oma",
+      "article": "die",
+      "emoji": "👵"
+    },
+    {
+      "id": "der-Onkel",
+      "word": "Onkel",
+      "article": "der",
+      "emoji": "👨"
+    },
+    {
+      "id": "die-Orange",
+      "word": "Orange",
+      "article": "die",
+      "emoji": "🍊"
+    },
+    {
+      "id": "der-Orangensaft",
+      "word": "Orangensaft",
+      "article": "der",
+      "emoji": "🍊"
+    },
+    {
+      "id": "das-Obst",
+      "word": "Obst",
+      "article": "das",
+      "emoji": "🍎"
+    },
+    {
+      "id": "der-Obstsalat",
+      "word": "Obstsalat",
+      "article": "der",
+      "emoji": "🍎"
+    },
+    {
+      "id": "der-Panter",
+      "word": "Panter",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Papierkorb",
+      "word": "Papierkorb",
+      "article": "der",
+      "emoji": "🗑️"
+    },
+    {
+      "id": "die-Party",
+      "word": "Party",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Pech",
+      "word": "Pech",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Picknick",
+      "word": "Picknick",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Pilot",
+      "word": "Pilot",
+      "article": "der",
+      "emoji": "👨‍✈️"
+    },
+    {
+      "id": "der-Pinguin",
+      "word": "Pinguin",
+      "article": "der",
+      "emoji": "🐧"
+    },
+    {
+      "id": "die-Pistole",
+      "word": "Pistole",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Pizza",
+      "word": "Pizza",
+      "article": "die",
+      "emoji": "🍕"
+    },
+    {
+      "id": "der-Pkw",
+      "word": "Pkw",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Plastik",
+      "word": "Plastik",
+      "article": "das",
+      "emoji": "♻️"
+    },
+    {
+      "id": "der-Platz",
+      "word": "Platz",
+      "article": "der",
+      "emoji": "⛸️"
+    },
+    {
+      "id": "der-Polster",
+      "word": "Polster",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Pommes frites",
+      "word": "Pommes frites",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Pony",
+      "word": "Pony",
+      "article": "das",
+      "emoji": "🐴"
+    },
+    {
+      "id": "das-Poster",
+      "word": "Poster",
+      "article": "das",
+      "emoji": "🖼️"
+    },
+    {
+      "id": "die-Prinzessin",
+      "word": "Prinzessin",
+      "article": "die",
+      "emoji": "👸"
+    },
+    {
+      "id": "der-Pudding",
+      "word": "Pudding",
+      "article": "der",
+      "emoji": "🍮"
+    },
+    {
+      "id": "der-Pullover",
+      "word": "Pullover",
+      "article": "der",
+      "emoji": "🧥"
+    },
+    {
+      "id": "die-Puppe",
+      "word": "Puppe",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Pyjama",
+      "word": "Pyjama",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Qualle",
+      "word": "Qualle",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Quelle",
+      "word": "Quelle",
+      "article": "die",
+      "emoji": "💧"
+    },
+    {
+      "id": "das-Rad",
+      "word": "Rad",
+      "article": "das",
+      "emoji": "🚲"
+    },
+    {
+      "id": "die-Rakete",
+      "word": "Rakete",
+      "article": "die",
+      "emoji": "🚀"
+    },
+    {
+      "id": "die-Ratte",
+      "word": "Ratte",
+      "article": "die",
+      "emoji": "🐀"
+    },
+    {
+      "id": "der-Rauchfangkehrer",
+      "word": "Rauchfangkehrer",
+      "article": "der",
+      "emoji": "🧹"
+    },
+    {
+      "id": "der-Regen",
+      "word": "Regen",
+      "article": "der",
+      "emoji": "🌧️"
+    },
+    {
+      "id": "der-Regenwurm",
+      "word": "Regenwurm",
+      "article": "der",
+      "emoji": "🪱"
+    },
+    {
+      "id": "die-Reise",
+      "word": "Reise",
+      "article": "die",
+      "emoji": "🧳"
+    },
+    {
+      "id": "das-Reiterstandbild",
+      "word": "Reiterstandbild",
+      "article": "das",
+      "emoji": "🖼️"
+    },
+    {
+      "id": "das-Restaurant",
+      "word": "Restaurant",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Ring",
+      "word": "Ring",
+      "article": "der",
+      "emoji": "💍"
+    },
+    {
+      "id": "der-Ritter",
+      "word": "Ritter",
+      "article": "der",
+      "emoji": "🛡️"
+    },
+    {
+      "id": "die-Rose",
+      "word": "Rose",
+      "article": "die",
+      "emoji": "🌹"
+    },
+    {
+      "id": "der-Rucksack",
+      "word": "Rucksack",
+      "article": "der",
+      "emoji": "🎒"
+    },
+    {
+      "id": "die-Ruine",
+      "word": "Ruine",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Scherz",
+      "word": "Scherz",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Schi",
+      "word": "Schi",
+      "article": "der",
+      "emoji": "🎭"
+    },
+    {
+      "id": "die-Schibrille",
+      "word": "Schibrille",
+      "article": "die",
+      "emoji": "👓"
+    },
+    {
+      "id": "der-Schilift",
+      "word": "Schilift",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Schirennen",
+      "word": "Schirennen",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Schistock",
+      "word": "Schistock",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Schlafzimmer",
+      "word": "Schlafzimmer",
+      "article": "das",
+      "emoji": "🏠"
+    },
+    {
+      "id": "die-Schlange",
+      "word": "Schlange",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Schmetterling",
+      "word": "Schmetterling",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Schmetterlinge",
+      "word": "Schmetterlinge",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Schnee",
+      "word": "Schnee",
+      "article": "der",
+      "emoji": "❄️"
+    },
+    {
+      "id": "die-Schneeballschlacht",
+      "word": "Schneeballschlacht",
+      "article": "die",
+      "emoji": "❄️"
+    },
+    {
+      "id": "der-Schneefall",
+      "word": "Schneefall",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Schneemann",
+      "word": "Schneemann",
+      "article": "der",
+      "emoji": "⛄"
+    },
+    {
+      "id": "der-Schneeregen",
+      "word": "Schneeregen",
+      "article": "der",
+      "emoji": "🌧️"
+    },
+    {
+      "id": "der-Schneesturm",
+      "word": "Schneesturm",
+      "article": "der",
+      "emoji": "🌬️"
+    },
+    {
+      "id": "der-Schreibtisch",
+      "word": "Schreibtisch",
+      "article": "der",
+      "emoji": "🥚"
+    },
+    {
+      "id": "der-Schuh",
+      "word": "Schuh",
+      "article": "der",
+      "emoji": "👟"
+    },
+    {
+      "id": "die-Salbe",
+      "word": "Salbe",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Samstag",
+      "word": "Samstag",
+      "article": "der",
+      "emoji": "📅"
+    },
+    {
+      "id": "der-Sand",
+      "word": "Sand",
+      "article": "der",
+      "emoji": "🏖️"
+    },
+    {
+      "id": "die-Sandburg",
+      "word": "Sandburg",
+      "article": "die",
+      "emoji": "🏖️"
+    },
+    {
+      "id": "die-Schachtel",
+      "word": "Schachtel",
+      "article": "die",
+      "emoji": "📦"
+    },
+    {
+      "id": "das-Schaf",
+      "word": "Schaf",
+      "article": "das",
+      "emoji": "🎗️"
+    },
+    {
+      "id": "der-Schal",
+      "word": "Schal",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Schüler",
+      "word": "Schüler",
+      "article": "der",
+      "emoji": "👧"
+    },
+    {
+      "id": "die-Schülerin",
+      "word": "Schülerin",
+      "article": "die",
+      "emoji": "👧"
+    },
+    {
+      "id": "der-Schulfreund",
+      "word": "Schulfreund",
+      "article": "der",
+      "emoji": "😊"
+    },
+    {
+      "id": "der-Schulhof",
+      "word": "Schulhof",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Schulküche",
+      "word": "Schulküche",
+      "article": "die",
+      "emoji": "🍳"
+    },
+    {
+      "id": "die-Schultasche",
+      "word": "Schultasche",
+      "article": "die",
+      "emoji": "🎒"
+    },
+    {
+      "id": "der-Schulwart",
+      "word": "Schulwart",
+      "article": "der",
+      "emoji": "🧹"
+    },
+    {
+      "id": "der-Schwarztee",
+      "word": "Schwarztee",
+      "article": "der",
+      "emoji": "👨‍⚕️"
+    },
+    {
+      "id": "der-Schweinsbraten",
+      "word": "Schweinsbraten",
+      "article": "der",
+      "emoji": "🥚"
+    },
+    {
+      "id": "die-Schwester",
+      "word": "Schwester",
+      "article": "die",
+      "emoji": "👧"
+    },
+    {
+      "id": "das-Schwimmbad",
+      "word": "Schwimmbad",
+      "article": "das",
+      "emoji": "🏊"
+    },
+    {
+      "id": "der-See",
+      "word": "See",
+      "article": "der",
+      "emoji": "🏞️"
+    },
+    {
+      "id": "der-Seelöwe",
+      "word": "Seelöwe",
+      "article": "der",
+      "emoji": "湖"
+    },
+    {
+      "id": "die-Semmel",
+      "word": "Semmel",
+      "article": "die",
+      "emoji": "🥪"
+    },
+    {
+      "id": "der-September",
+      "word": "September",
+      "article": "der",
+      "emoji": "🗓️"
+    },
+    {
+      "id": "der-Sheriff",
+      "word": "Sheriff",
+      "article": "der",
+      "emoji": "🤠"
+    },
+    {
+      "id": "das-Silber",
+      "word": "Silber",
+      "article": "das",
+      "emoji": "🥈"
+    },
+    {
+      "id": "der-Socken",
+      "word": "Socken",
+      "article": "der",
+      "emoji": "🧦"
+    },
+    {
+      "id": "der-Sommer",
+      "word": "Sommer",
+      "article": "der",
+      "emoji": "☀️"
+    },
+    {
+      "id": "die-Sonnenblume",
+      "word": "Sonnenblume",
+      "article": "die",
+      "emoji": "🌻"
+    },
+    {
+      "id": "der-Sonntag",
+      "word": "Sonntag",
+      "article": "der",
+      "emoji": "📅"
+    },
+    {
+      "id": "die-Spaghetti",
+      "word": "Spaghetti",
+      "article": "die",
+      "emoji": "🍝"
+    },
+    {
+      "id": "der-Spaß",
+      "word": "Spaß",
+      "article": "der",
+      "emoji": "😄"
+    },
+    {
+      "id": "der-Spielplatz",
+      "word": "Spielplatz",
+      "article": "der",
+      "emoji": "🛝"
+    },
+    {
+      "id": "das-Spielzeug",
+      "word": "Spielzeug",
+      "article": "das",
+      "emoji": "🧸"
+    },
+    {
+      "id": "der-Spinat",
+      "word": "Spinat",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Spital",
+      "word": "Spital",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Sportplatz",
+      "word": "Sportplatz",
+      "article": "der",
+      "emoji": "🏟️"
+    },
+    {
+      "id": "die-Spritze",
+      "word": "Spritze",
+      "article": "die",
+      "emoji": "💉"
+    },
+    {
+      "id": "der-Staubsauger",
+      "word": "Staubsauger",
+      "article": "der",
+      "emoji": "👁️"
+    },
+    {
+      "id": "der-Stein",
+      "word": "Stein",
+      "article": "der",
+      "emoji": "🪨"
+    },
+    {
+      "id": "der-Stiefel",
+      "word": "Stiefel",
+      "article": "der",
+      "emoji": "🥾"
+    },
+    {
+      "id": "das-Stirnband",
+      "word": "Stirnband",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Stock",
+      "word": "Stock",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Strand",
+      "word": "Strand",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Straße",
+      "word": "Straße",
+      "article": "die",
+      "emoji": "🛣️"
+    },
+    {
+      "id": "der-Strauch",
+      "word": "Strauch",
+      "article": "der",
+      "emoji": "🌿"
+    },
+    {
+      "id": "der-Strauß",
+      "word": "Strauß",
+      "article": "der",
+      "emoji": "💐"
+    },
+    {
+      "id": "das-Studio",
+      "word": "Studio",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Stunde",
+      "word": "Stunde",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Sturm",
+      "word": "Sturm",
+      "article": "der",
+      "emoji": "🌬️"
+    },
+    {
+      "id": "der-Sturzhelm",
+      "word": "Sturzhelm",
+      "article": "der",
+      "emoji": "⛑️"
+    },
+    {
+      "id": "die-Tablette",
+      "word": "Tablette",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Tagebuch",
+      "word": "Tagebuch",
+      "article": "das",
+      "emoji": "📔"
+    },
+    {
+      "id": "die-Tante",
+      "word": "Tante",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Vampir",
+      "word": "Vampir",
+      "article": "der",
+      "emoji": "🧛"
+    },
+    {
+      "id": "das-Vanillekipferl",
+      "word": "Vanillekipferl",
+      "article": "das",
+      "emoji": "🍪"
+    },
+    {
+      "id": "der-Verband",
+      "word": "Verband",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Verkäufer",
+      "word": "Verkäufer",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Verkäuferin",
+      "word": "Verkäuferin",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Violine",
+      "word": "Violine",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Volksschule",
+      "word": "Volksschule",
+      "article": "die",
+      "emoji": "🏫"
+    },
+    {
+      "id": "der-Volleyball",
+      "word": "Volleyball",
+      "article": "der",
+      "emoji": "⚽"
+    },
+    {
+      "id": "der-Vormittag",
+      "word": "Vormittag",
+      "article": "der",
+      "emoji": "🕛"
+    },
+    {
+      "id": "der-Vorname",
+      "word": "Vorname",
+      "article": "der",
+      "emoji": "🔤"
+    },
+    {
+      "id": "die-Taschenlampe",
+      "word": "Taschenlampe",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "die-Tasse",
+      "word": "Tasse",
+      "article": "die",
+      "emoji": "☕"
+    },
+    {
+      "id": "das-Taxi",
+      "word": "Taxi",
+      "article": "das",
+      "emoji": "🚕"
+    },
+    {
+      "id": "der-Teddy",
+      "word": "Teddy",
+      "article": "der",
+      "emoji": "🧸"
+    },
+    {
+      "id": "der-Tee",
+      "word": "Tee",
+      "article": "der",
+      "emoji": "🍵"
+    },
+    {
+      "id": "der-Teich",
+      "word": "Teich",
+      "article": "der",
+      "emoji": "🏞️"
+    },
+    {
+      "id": "die-Temperatur",
+      "word": "Temperatur",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Tennisplatz",
+      "word": "Tennisplatz",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Tiger",
+      "word": "Tiger",
+      "article": "der",
+      "emoji": "🐯"
+    },
+    {
+      "id": "die-Toilette",
+      "word": "Toilette",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "das-Tor",
+      "word": "Tor",
+      "article": "das",
+      "emoji": "🥅"
+    },
+    {
+      "id": "der-Tormann",
+      "word": "Tormann",
+      "article": "der",
+      "emoji": "🥅"
+    },
+    {
+      "id": "der-Traum",
+      "word": "Traum",
+      "article": "der",
+      "emoji": "💭"
+    },
+    {
+      "id": "das-T-Shirt",
+      "word": "T-Shirt",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Turnsaal",
+      "word": "Turnsaal",
+      "article": "der",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Urwald",
+      "word": "Urwald",
+      "article": "der",
+      "emoji": "🌲"
+    },
+    {
+      "id": "die-Überraschung",
+      "word": "Überraschung",
+      "article": "die",
+      "emoji": "🎁"
+    },
+    {
+      "id": "der-Uhu",
+      "word": "Uhu",
+      "article": "der",
+      "emoji": "🦉"
+    },
+    {
+      "id": "das-Vorzimmer",
+      "word": "Vorzimmer",
+      "article": "das",
+      "emoji": "🏠"
+    },
+    {
+      "id": "der-Wal",
+      "word": "Wal",
+      "article": "der",
+      "emoji": "🌲"
+    },
+    {
+      "id": "der-Wald",
+      "word": "Wald",
+      "article": "der",
+      "emoji": "🌲"
+    },
+    {
+      "id": "die-Wanderung",
+      "word": "Wanderung",
+      "article": "die",
+      "emoji": "🥾"
+    },
+    {
+      "id": "die-Wärme",
+      "word": "Wärme",
+      "article": "die",
+      "emoji": "🔥"
+    },
+    {
+      "id": "der-Wassermann",
+      "word": "Wassermann",
+      "article": "der",
+      "emoji": "♒"
+    },
+    {
+      "id": "das-WC",
+      "word": "WC",
+      "article": "das",
+      "emoji": "🚽"
+    },
+    {
+      "id": "der-Wecker",
+      "word": "Wecker",
+      "article": "der",
+      "emoji": "⏰"
+    },
+    {
+      "id": "der-Weihnachtsmann",
+      "word": "Weihnachtsmann",
+      "article": "der",
+      "emoji": "🎅"
+    },
+    {
+      "id": "der-Wellensittich",
+      "word": "Wellensittich",
+      "article": "der",
+      "emoji": "🐦"
+    },
+    {
+      "id": "die-Werkstätte",
+      "word": "Werkstätte",
+      "article": "die",
+      "emoji": "🛠️"
+    },
+    {
+      "id": "die-Wespe",
+      "word": "Wespe",
+      "article": "die",
+      "emoji": "🐝"
+    },
+    {
+      "id": "das-Wiedersehen",
+      "word": "Wiedersehen",
+      "article": "das",
+      "emoji": "👋"
+    },
+    {
+      "id": "der-Wind",
+      "word": "Wind",
+      "article": "der",
+      "emoji": "🌬️"
+    },
+    {
+      "id": "der-Winter",
+      "word": "Winter",
+      "article": "der",
+      "emoji": "❄️"
+    },
+    {
+      "id": "das-Wochenende",
+      "word": "Wochenende",
+      "article": "das",
+      "emoji": "🏖️"
+    },
+    {
+      "id": "das-Wohnzimmer",
+      "word": "Wohnzimmer",
+      "article": "das",
+      "emoji": "🛋️"
+    },
+    {
+      "id": "die-Wolke",
+      "word": "Wolke",
+      "article": "die",
+      "emoji": "☁️"
+    },
+    {
+      "id": "die-Wunde",
+      "word": "Wunde",
+      "article": "die",
+      "emoji": "🩹"
+    },
+    {
+      "id": "das-Wunder",
+      "word": "Wunder",
+      "article": "das",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Wunsch",
+      "word": "Wunsch",
+      "article": "der",
+      "emoji": "🌠"
+    },
+    {
+      "id": "der-Wunschzettel",
+      "word": "Wunschzettel",
+      "article": "der",
+      "emoji": "📜"
+    },
+    {
+      "id": "die-Wurstsemmel",
+      "word": "Wurstsemmel",
+      "article": "die",
+      "emoji": "🥪"
+    },
+    {
+      "id": "die-Wurstsemmeln",
+      "word": "Wurstsemmeln",
+      "article": "die",
+      "emoji": "🥪"
+    },
+    {
+      "id": "der-Zahn",
+      "word": "Zahn",
+      "article": "der",
+      "emoji": "🦷"
+    },
+    {
+      "id": "die-Zähne",
+      "word": "Zähne",
+      "article": "die",
+      "emoji": "🦷"
+    },
+    {
+      "id": "die-Zahnschmerzen",
+      "word": "Zahnschmerzen",
+      "article": "die",
+      "emoji": "🦷"
+    },
+    {
+      "id": "die-Zauberei",
+      "word": "Zauberei",
+      "article": "die",
+      "emoji": "🪄"
+    },
+    {
+      "id": "der-Zauberer",
+      "word": "Zauberer",
+      "article": "der",
+      "emoji": "🧙"
+    },
+    {
+      "id": "das-Zauberschloss",
+      "word": "Zauberschloss",
+      "article": "das",
+      "emoji": "🏰"
+    },
+    {
+      "id": "die-Zauberschlösser",
+      "word": "Zauberschlösser",
+      "article": "die",
+      "emoji": "✨"
+    },
+    {
+      "id": "der-Zauberstab",
+      "word": "Zauberstab",
+      "article": "der",
+      "emoji": "🪄"
+    },
+    {
+      "id": "das-Zebra",
+      "word": "Zebra",
+      "article": "das",
+      "emoji": "🦓"
+    },
+    {
+      "id": "die-Zehe",
+      "word": "Zehe",
+      "article": "die",
+      "emoji": "🦶"
+    },
+    {
+      "id": "die-Zeichnung",
+      "word": "Zeichnung",
+      "article": "die",
+      "emoji": "🎨"
+    },
+    {
+      "id": "das-Zelt",
+      "word": "Zelt",
+      "article": "das",
+      "emoji": "⛺"
+    },
+    {
+      "id": "der-Zwerghase",
+      "word": "Zwerghase",
+      "article": "der",
+      "emoji": "🐰"
+    },
+    {
+      "id": "der-Zylinder",
+      "word": "Zylinder",
+      "article": "der",
+      "emoji": "🎩"
+    }
+  ]
+}

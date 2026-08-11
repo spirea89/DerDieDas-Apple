@@ -1,0 +1,1822 @@
+{
+  "version": 1,
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "de",
+      "name": "Deutsch"
+    }
+  ],
+  "defaultLanguage": "en",
+  "ui": {
+    "navGame": {
+      "en": "Game",
+      "de": "Spiel"
+    },
+    "navConfigure": {
+      "en": "Configure",
+      "de": "Konfigurieren"
+    },
+    "navAdminHint": {
+      "en": "Web admin",
+      "de": "Web-Admin"
+    },
+    "languageLabel": {
+      "en": "Language",
+      "de": "Sprache"
+    },
+    "gameEyebrow": {
+      "en": "German practice wheel",
+      "de": "Deutsch-Übungsrad"
+    },
+    "gameTitle": {
+      "en": "Spin, answer, score, repeat.",
+      "de": "Drehen, antworten, punkten."
+    },
+    "start": {
+      "en": "Start",
+      "de": "Start"
+    },
+    "spin": {
+      "en": "Spin",
+      "de": "Drehen"
+    },
+    "players": {
+      "en": "Players",
+      "de": "Spieler"
+    },
+    "playerCount": {
+      "en": "Number of players",
+      "de": "Anzahl der Spieler"
+    },
+    "playerNames": {
+      "en": "Player names",
+      "de": "Spielernamen"
+    },
+    "playerName": {
+      "en": "Player",
+      "de": "Spieler"
+    },
+    "rounds": {
+      "en": "Spins per player",
+      "de": "Drehungen pro Spieler"
+    },
+    "rounds5": {
+      "en": "5 spins each",
+      "de": "5 Drehungen"
+    },
+    "rounds10": {
+      "en": "10 spins each",
+      "de": "10 Drehungen"
+    },
+    "rounds20": {
+      "en": "20 spins each",
+      "de": "20 Drehungen"
+    },
+    "rounds30": {
+      "en": "30 spins each",
+      "de": "30 Drehungen"
+    },
+    "newGame": {
+      "en": "New Game",
+      "de": "Neues Spiel"
+    },
+    "resetScores": {
+      "en": "Reset Scores",
+      "de": "Punkte zurücksetzen"
+    },
+    "turn": {
+      "en": "Turn",
+      "de": "Am Zug"
+    },
+    "round": {
+      "en": "Spins",
+      "de": "Drehungen"
+    },
+    "question": {
+      "en": "Question",
+      "de": "Frage"
+    },
+    "scoreAnswer": {
+      "en": "Score this answer",
+      "de": "Antwort bewerten"
+    },
+    "replayQuestion": {
+      "en": "Play question again",
+      "de": "Frage erneut abspielen"
+    },
+    "showExample": {
+      "en": "Show example",
+      "de": "Beispiel zeigen"
+    },
+    "spinToChoose": {
+      "en": "Spin to choose",
+      "de": "Drehen zum Auswählen"
+    },
+    "intro": {
+      "en": "Add players, choose the round count, then press Start.",
+      "de": "Spieler eintragen, Rundenzahl wählen und Start drücken."
+    },
+    "noPlayers": {
+      "en": "No players yet.",
+      "de": "Noch keine Spieler."
+    },
+    "suggestedAnswer": {
+      "en": "Suggested answer",
+      "de": "Mögliche Antwort"
+    },
+    "spinning": {
+      "en": "Spinning...",
+      "de": "Das Rad dreht..."
+    },
+    "getReady": {
+      "en": "Get ready to answer in German.",
+      "de": "Mach dich bereit, auf Deutsch zu antworten."
+    },
+    "gameOver": {
+      "en": "Game over",
+      "de": "Spiel beendet"
+    },
+    "wonWith": {
+      "en": "won with",
+      "de": "gewinnt mit"
+    },
+    "points": {
+      "en": "points",
+      "de": "Punkten"
+    },
+    "nextTurn": {
+      "en": "Next turn",
+      "de": "Nächster Zug"
+    },
+    "pressStart": {
+      "en": "press Start.",
+      "de": "drücke Start."
+    },
+    "scoresReset": {
+      "en": "Scores are reset. Press Start when ready.",
+      "de": "Punkte sind zurückgesetzt. Drücke Start, wenn du bereit bist."
+    },
+    "dataError": {
+      "en": "Data error",
+      "de": "Datenfehler"
+    },
+    "winnerEyebrow": {
+      "en": "Winner",
+      "de": "Gewinner"
+    },
+    "winnerSubtitle": {
+      "en": "finished with",
+      "de": "endet mit"
+    },
+    "closeCelebration": {
+      "en": "Close",
+      "de": "Schließen"
+    },
+    "configEyebrow": {
+      "en": "Content editor",
+      "de": "Inhalte bearbeiten"
+    },
+    "configTitle": {
+      "en": "Configure categories and German questions.",
+      "de": "Kategorien und Deutschfragen konfigurieren."
+    },
+    "categories": {
+      "en": "Categories",
+      "de": "Kategorien"
+    },
+    "addCategory": {
+      "en": "Add Category",
+      "de": "Kategorie hinzufügen"
+    },
+    "categoryId": {
+      "en": "ID",
+      "de": "ID"
+    },
+    "wheelLabel": {
+      "en": "Wheel label",
+      "de": "Rad-Beschriftung"
+    },
+    "labelsByLanguage": {
+      "en": "Labels by language",
+      "de": "Beschriftungen nach Sprache"
+    },
+    "questionFile": {
+      "en": "Question file",
+      "de": "Fragedatei"
+    },
+    "questions": {
+      "en": "Questions",
+      "de": "Fragen"
+    },
+    "questionsAndAnswers": {
+      "en": "Questions and suggested answers",
+      "de": "Fragen und mögliche Antworten"
+    },
+    "saveChanges": {
+      "en": "Save changes",
+      "de": "Änderungen speichern"
+    },
+    "savedLocally": {
+      "en": "Saved on this device.",
+      "de": "Auf diesem Gerät gespeichert."
+    },
+    "reloadDefaults": {
+      "en": "Reset to defaults",
+      "de": "Auf Standard zurücksetzen"
+    },
+    "staticNote": {
+      "en": "Edits are saved on this device. For new languages and full translation packs, use the web admin, then replace content.json in the app.",
+      "de": "Änderungen werden auf diesem Gerät gespeichert. Neue Sprachen und komplette Übersetzungspakete pflegst du im Web-Admin und ersetzt dann content.json in der App."
+    },
+    "fileFormat": {
+      "en": "Content pack format",
+      "de": "Inhaltspaket-Format"
+    },
+    "newQuestionFile": {
+      "en": "New category",
+      "de": "Neue Kategorie"
+    },
+    "prompt": {
+      "en": "Question",
+      "de": "Frage"
+    },
+    "answer": {
+      "en": "Suggested answer",
+      "de": "Mögliche Antwort"
+    },
+    "addQuestion": {
+      "en": "Add question",
+      "de": "Frage hinzufügen"
+    },
+    "delete": {
+      "en": "Delete",
+      "de": "Löschen"
+    },
+    "unsaved": {
+      "en": "You have unsaved changes.",
+      "de": "Es gibt ungespeicherte Änderungen."
+    },
+    "noCategories": {
+      "en": "No categories yet.",
+      "de": "Noch keine Kategorien."
+    },
+    "editLanguage": {
+      "en": "Edit labels in",
+      "de": "Beschriftungen bearbeiten in"
+    }
+  },
+  "categories": [
+    {
+      "id": "morning",
+      "labels": {
+        "en": "Morning",
+        "de": "Morgen"
+      },
+      "questions": [
+        {
+          "prompt": "Wie hast du geschlafen?",
+          "answer": "Ich habe gut geschlafen."
+        },
+        {
+          "prompt": "Wann bist du heute aufgestanden?",
+          "answer": "Ich bin um sieben Uhr aufgestanden."
+        },
+        {
+          "prompt": "Was hast du geträumt?",
+          "answer": "Ich habe von einem Urlaub geträumt."
+        },
+        {
+          "prompt": "Hast du gut geschlafen?",
+          "answer": "Ja, ich habe gut geschlafen."
+        },
+        {
+          "prompt": "Was möchtest du heute machen?",
+          "answer": "Ich möchte heute mit meiner Familie spielen."
+        },
+        {
+          "prompt": "Was isst du normalerweise zum Frühstück?",
+          "answer": "Ich esse normalerweise Brot und Obst."
+        },
+        {
+          "prompt": "Was hast du heute gefrühstückt?",
+          "answer": "Ich habe Brot mit Käse gefrühstückt."
+        },
+        {
+          "prompt": "Trinkst du lieber Tee oder Kaffee?",
+          "answer": "Ich trinke lieber Tee."
+        },
+        {
+          "prompt": "Welche Kleidung trägst du heute?",
+          "answer": "Ich trage heute ein T-Shirt und eine Hose."
+        },
+        {
+          "prompt": "Wie ist das Wetter heute?",
+          "answer": "Heute ist es sonnig und warm."
+        },
+        {
+          "prompt": "Was nimmst du mit zur Arbeit oder zur Schule?",
+          "answer": "Ich nehme meine Tasche und eine Wasserflasche mit."
+        },
+        {
+          "prompt": "Musst du heute viel arbeiten?",
+          "answer": "Ja, ich muss heute viel arbeiten."
+        },
+        {
+          "prompt": "Worauf freust du dich heute?",
+          "answer": "Ich freue mich auf den Nachmittag."
+        },
+        {
+          "prompt": "Hast du heute Hausaufgaben?",
+          "answer": "Ja, ich habe heute Hausaufgaben."
+        },
+        {
+          "prompt": "Welche Farbe hat dein T-Shirt?",
+          "answer": "Mein T-Shirt ist blau."
+        },
+        {
+          "prompt": "Wer hat heute gute Laune?",
+          "answer": "Heute haben wir alle gute Laune."
+        },
+        {
+          "prompt": "Was machst du jeden Morgen zuerst?",
+          "answer": "Ich stehe auf und öffne das Fenster."
+        },
+        {
+          "prompt": "Putzt du dir morgens die Zähne?",
+          "answer": "Ja, ich putze mir morgens die Zähne."
+        },
+        {
+          "prompt": "Wer macht das Frühstück?",
+          "answer": "Heute macht Papa das Frühstück."
+        },
+        {
+          "prompt": "Welche Jahreszeit magst du am Morgen?",
+          "answer": "Ich mag den Frühling am Morgen."
+        },
+        {
+          "prompt": "Magst du früh aufstehen?",
+          "answer": "Nein, ich stehe nicht gern früh auf."
+        },
+        {
+          "prompt": "Was riechst du am Morgen?",
+          "answer": "Ich rieche frischen Kaffee."
+        },
+        {
+          "prompt": "Welches Obst isst du gerne zum Frühstück?",
+          "answer": "Ich esse gerne einen Apfel zum Frühstück."
+        },
+        {
+          "prompt": "Hast du heute einen Plan?",
+          "answer": "Ja, ich möchte heute lernen und spielen."
+        },
+        {
+          "prompt": "Was macht dich morgens glücklich?",
+          "answer": "Ein gutes Frühstück macht mich morgens glücklich."
+        },
+        {
+          "prompt": "Was hörst du morgens gern?",
+          "answer": "Ich höre morgens gern Musik."
+        },
+        {
+          "prompt": "Mit wem frühstückst du am liebsten?",
+          "answer": "Ich frühstücke am liebsten mit meiner Familie."
+        },
+        {
+          "prompt": "Welche Schuhe trägst du heute?",
+          "answer": "Ich trage heute meine Turnschuhe."
+        },
+        {
+          "prompt": "Was möchtest du heute lernen?",
+          "answer": "Ich möchte heute neue deutsche Wörter lernen."
+        },
+        {
+          "prompt": "Wie fühlst du dich heute Morgen?",
+          "answer": "Ich fühle mich heute Morgen gut und fröhlich."
+        }
+      ]
+    },
+    {
+      "id": "lunch",
+      "labels": {
+        "en": "Lunch time",
+        "de": "Mittag"
+      },
+      "questions": [
+        {
+          "prompt": "Was hast du heute zu Mittag gegessen?",
+          "answer": "Ich habe heute Nudeln zu Mittag gegessen."
+        },
+        {
+          "prompt": "Was ist dein Lieblingsessen?",
+          "answer": "Mein Lieblingsessen ist Pizza."
+        },
+        {
+          "prompt": "Kannst du kochen?",
+          "answer": "Ja, ich kann ein paar Gerichte kochen."
+        },
+        {
+          "prompt": "Wer kocht bei euch zu Hause?",
+          "answer": "Bei uns kochen meistens Mama und Papa."
+        },
+        {
+          "prompt": "Isst du lieber Fleisch oder Gemüse?",
+          "answer": "Ich esse lieber Gemüse."
+        },
+        {
+          "prompt": "Was trinkst du zum Mittagessen?",
+          "answer": "Ich trinke Wasser zum Mittagessen."
+        },
+        {
+          "prompt": "Magst du Suppe?",
+          "answer": "Ja, ich mag Suppe."
+        },
+        {
+          "prompt": "Was möchtest du heute Abend essen?",
+          "answer": "Ich möchte heute Abend Reis mit Gemüse essen."
+        },
+        {
+          "prompt": "Was kannst du gut kochen?",
+          "answer": "Ich kann gut Nudeln kochen."
+        },
+        {
+          "prompt": "Welches Gemüse magst du?",
+          "answer": "Ich mag Karotten und Tomaten."
+        },
+        {
+          "prompt": "Magst du Pizza oder Pasta lieber?",
+          "answer": "Ich mag Pizza lieber."
+        },
+        {
+          "prompt": "Hast du heute Hunger?",
+          "answer": "Ja, ich habe großen Hunger."
+        },
+        {
+          "prompt": "Wie oft gehst du ins Restaurant?",
+          "answer": "Ich gehe ungefähr einmal pro Woche ins Restaurant."
+        },
+        {
+          "prompt": "Was war dein bestes Mittagessen?",
+          "answer": "Mein bestes Mittagessen war am Meer."
+        },
+        {
+          "prompt": "Was isst du nie?",
+          "answer": "Ich esse nie sehr scharfes Essen."
+        },
+        {
+          "prompt": "Welche Früchte magst du?",
+          "answer": "Ich mag Äpfel, Bananen und Erdbeeren."
+        },
+        {
+          "prompt": "Kochst du gerne?",
+          "answer": "Ja, ich koche sehr gerne."
+        },
+        {
+          "prompt": "Welches Getränk magst du am liebsten?",
+          "answer": "Ich mag Wasser am liebsten."
+        },
+        {
+          "prompt": "Isst du gern Salat?",
+          "answer": "Ja, ich esse gern Salat."
+        },
+        {
+          "prompt": "Was möchtest du einmal probieren?",
+          "answer": "Ich möchte einmal Sushi probieren."
+        },
+        {
+          "prompt": "Wer ist der beste Koch in der Familie?",
+          "answer": "Papa ist der beste Koch in der Familie."
+        },
+        {
+          "prompt": "Was hast du heute gelernt?",
+          "answer": "Ich habe heute neue deutsche Wörter gelernt."
+        },
+        {
+          "prompt": "Mit wem isst du am liebsten zu Mittag?",
+          "answer": "Ich esse am liebsten mit meiner Familie zu Mittag."
+        },
+        {
+          "prompt": "Was war heute lustig?",
+          "answer": "Ein Witz beim Mittagessen war heute lustig."
+        },
+        {
+          "prompt": "Hast du heute viel gearbeitet?",
+          "answer": "Ja, ich habe heute viel gearbeitet."
+        },
+        {
+          "prompt": "Was war heute schwierig?",
+          "answer": "Die Deutschaufgabe war heute schwierig."
+        },
+        {
+          "prompt": "Was war heute einfach?",
+          "answer": "Das Lesen war heute einfach."
+        },
+        {
+          "prompt": "Worüber hast du heute gelacht?",
+          "answer": "Ich habe über einen lustigen Witz gelacht."
+        },
+        {
+          "prompt": "Wen hast du heute getroffen?",
+          "answer": "Ich habe heute meine Freunde getroffen."
+        },
+        {
+          "prompt": "Wie war dein Vormittag?",
+          "answer": "Mein Vormittag war schön und interessant."
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "labels": {
+        "en": "Evening",
+        "de": "Abend"
+      },
+      "questions": [
+        {
+          "prompt": "Wie war dein Tag?",
+          "answer": "Mein Tag war schön und interessant."
+        },
+        {
+          "prompt": "Was war heute das Schönste?",
+          "answer": "Das Schönste war die Zeit mit meiner Familie."
+        },
+        {
+          "prompt": "Was war heute schwierig?",
+          "answer": "Die Hausaufgaben waren heute schwierig."
+        },
+        {
+          "prompt": "Worüber bist du heute glücklich?",
+          "answer": "Ich bin über einen schönen Tag glücklich."
+        },
+        {
+          "prompt": "Was möchtest du morgen machen?",
+          "answer": "Ich möchte morgen draußen spielen."
+        },
+        {
+          "prompt": "Hast du heute etwas Neues gelernt?",
+          "answer": "Ja, ich habe heute ein neues deutsches Wort gelernt."
+        },
+        {
+          "prompt": "Wem möchtest du heute Danke sagen?",
+          "answer": "Ich möchte meiner Familie Danke sagen."
+        },
+        {
+          "prompt": "Was hat dich heute überrascht?",
+          "answer": "Ein unerwarteter Besuch hat mich überrascht."
+        },
+        {
+          "prompt": "Was möchtest du morgen essen?",
+          "answer": "Ich möchte morgen Pizza essen."
+        },
+        {
+          "prompt": "Hast du heute jemandem geholfen?",
+          "answer": "Ja, ich habe heute einem Freund geholfen."
+        },
+        {
+          "prompt": "Wer hat dir heute geholfen?",
+          "answer": "Meine Familie hat mir heute geholfen."
+        },
+        {
+          "prompt": "Was würdest du heute anders machen?",
+          "answer": "Ich würde heute früher anfangen."
+        },
+        {
+          "prompt": "Welchen Film möchtest du sehen?",
+          "answer": "Ich möchte einen lustigen Familienfilm sehen."
+        },
+        {
+          "prompt": "Welches Buch liest du gerade?",
+          "answer": "Ich lese gerade ein spannendes Kinderbuch."
+        },
+        {
+          "prompt": "Was machst du vor dem Schlafengehen?",
+          "answer": "Ich putze meine Zähne und lese ein Buch."
+        },
+        {
+          "prompt": "Wann gehst du heute schlafen?",
+          "answer": "Ich gehe heute um neun Uhr schlafen."
+        },
+        {
+          "prompt": "Worauf freust du dich morgen?",
+          "answer": "Ich freue mich morgen auf die Schule."
+        },
+        {
+          "prompt": "Was war heute dein Lieblingsmoment?",
+          "answer": "Mein Lieblingsmoment war das gemeinsame Abendessen."
+        },
+        {
+          "prompt": "Was hast du heute gespielt?",
+          "answer": "Ich habe heute ein Brettspiel gespielt."
+        },
+        {
+          "prompt": "Mit wem hast du heute gesprochen?",
+          "answer": "Ich habe heute mit meiner Familie gesprochen."
+        },
+        {
+          "prompt": "Was möchtest du morgen lernen?",
+          "answer": "Ich möchte morgen neue deutsche Sätze lernen."
+        },
+        {
+          "prompt": "Bist du heute müde?",
+          "answer": "Ja, ich bin heute ein bisschen müde."
+        },
+        {
+          "prompt": "Was macht dich abends glücklich?",
+          "answer": "Ein ruhiger Abend mit meiner Familie macht mich glücklich."
+        },
+        {
+          "prompt": "Was hörst du vor dem Schlafen?",
+          "answer": "Ich höre vor dem Schlafen eine Geschichte."
+        },
+        {
+          "prompt": "Welche Geschichte magst du?",
+          "answer": "Ich mag lustige Abenteuergeschichten."
+        },
+        {
+          "prompt": "Wofür bist du heute dankbar?",
+          "answer": "Ich bin heute für meine Familie dankbar."
+        },
+        {
+          "prompt": "Was war heute besonders?",
+          "answer": "Das gemeinsame Spielen war heute besonders."
+        },
+        {
+          "prompt": "Wer hat heute viel gelacht?",
+          "answer": "Wir haben heute alle viel gelacht."
+        },
+        {
+          "prompt": "Was möchtest du träumen?",
+          "answer": "Ich möchte von einer schönen Reise träumen."
+        },
+        {
+          "prompt": "Was war heute dein größter Erfolg?",
+          "answer": "Mein größter Erfolg war eine schwierige Aufgabe zu lösen."
+        }
+      ]
+    },
+    {
+      "id": "family",
+      "labels": {
+        "en": "Family",
+        "de": "Familie"
+      },
+      "questions": [
+        {
+          "prompt": "Wer gehört zu deiner Familie?",
+          "answer": "Zu meiner Familie gehören meine Eltern und mein Kind."
+        },
+        {
+          "prompt": "Hast du Geschwister?",
+          "answer": "Ja, ich habe einen Bruder."
+        },
+        {
+          "prompt": "Wie heißt deine Mutter?",
+          "answer": "Meine Mutter heißt Anna."
+        },
+        {
+          "prompt": "Wie heißt dein Vater?",
+          "answer": "Mein Vater heißt Paul."
+        },
+        {
+          "prompt": "Wer ist die lustigste Person in deiner Familie?",
+          "answer": "Mein Vater ist am lustigsten."
+        },
+        {
+          "prompt": "Mit wem verbringst du am liebsten Zeit?",
+          "answer": "Ich verbringe gern Zeit mit meiner Familie."
+        },
+        {
+          "prompt": "Was macht deine Mutter gern?",
+          "answer": "Sie liest gern Bücher."
+        },
+        {
+          "prompt": "Was kann dein Vater gut?",
+          "answer": "Er kann gut kochen."
+        },
+        {
+          "prompt": "Wer kocht bei euch am besten?",
+          "answer": "Meine Frau kocht am besten."
+        },
+        {
+          "prompt": "Was macht ihr am Wochenende zusammen?",
+          "answer": "Wir gehen spazieren."
+        },
+        {
+          "prompt": "Hast du Großeltern?",
+          "answer": "Ja, ich habe zwei Großmütter."
+        },
+        {
+          "prompt": "Wo wohnen deine Großeltern?",
+          "answer": "Sie wohnen in Rumänien."
+        },
+        {
+          "prompt": "Wie oft besuchst du deine Familie?",
+          "answer": "Ich besuche sie jeden Sommer."
+        },
+        {
+          "prompt": "Wer hilft dir oft?",
+          "answer": "Meine Familie hilft mir oft."
+        },
+        {
+          "prompt": "Wem erzählst du deine Geheimnisse?",
+          "answer": "Ich erzähle sie meiner Frau."
+        },
+        {
+          "prompt": "Was spielst du gern mit deiner Familie?",
+          "answer": "Wir spielen gern Brettspiele."
+        },
+        {
+          "prompt": "Wer steht morgens zuerst auf?",
+          "answer": "Mein Vater steht zuerst auf."
+        },
+        {
+          "prompt": "Wer geht abends zuletzt schlafen?",
+          "answer": "Meine Mutter geht zuletzt schlafen."
+        },
+        {
+          "prompt": "Was isst deine Familie gern?",
+          "answer": "Wir essen gern Pizza."
+        },
+        {
+          "prompt": "Welche Tradition hat deine Familie?",
+          "answer": "Wir feiern Weihnachten zusammen."
+        },
+        {
+          "prompt": "Wer bringt dich zum Lachen?",
+          "answer": "Meine Tochter bringt mich zum Lachen."
+        },
+        {
+          "prompt": "Was hast du von deinen Eltern gelernt?",
+          "answer": "Ich habe Geduld gelernt."
+        },
+        {
+          "prompt": "Welche Person in deiner Familie bewunderst du?",
+          "answer": "Ich bewundere meine Mutter."
+        },
+        {
+          "prompt": "Wie feiert ihr Geburtstage?",
+          "answer": "Wir essen Kuchen und singen."
+        },
+        {
+          "prompt": "Wer erzählt die besten Geschichten?",
+          "answer": "Mein Großvater erzählt die besten Geschichten."
+        },
+        {
+          "prompt": "Was macht deine Familie besonders?",
+          "answer": "Wir helfen einander immer."
+        },
+        {
+          "prompt": "Mit wem telefonierst du oft?",
+          "answer": "Ich telefoniere oft mit meiner Mutter."
+        },
+        {
+          "prompt": "Was möchtest du mit deiner Familie unternehmen?",
+          "answer": "Ich möchte mit ihnen reisen."
+        },
+        {
+          "prompt": "Wofür bist du deiner Familie dankbar?",
+          "answer": "Ich bin für ihre Liebe dankbar."
+        },
+        {
+          "prompt": "Beschreibe deine Familie mit drei Wörtern.",
+          "answer": "Meine Familie ist liebevoll, lustig und stark."
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "labels": {
+        "en": "Home",
+        "de": "Zuhause"
+      },
+      "questions": [
+        {
+          "prompt": "In welchem Zimmer bist du am liebsten?",
+          "answer": "Ich bin am liebsten im Wohnzimmer."
+        },
+        {
+          "prompt": "Wie viele Zimmer hat eure Wohnung?",
+          "answer": "Unsere Wohnung hat vier Zimmer."
+        },
+        {
+          "prompt": "Welche Farbe hat dein Zimmer?",
+          "answer": "Mein Zimmer ist blau."
+        },
+        {
+          "prompt": "Was steht in deinem Schlafzimmer?",
+          "answer": "Dort stehen ein Bett und ein Schrank."
+        },
+        {
+          "prompt": "Wo isst deine Familie zusammen?",
+          "answer": "Wir essen in der Küche."
+        },
+        {
+          "prompt": "Hast du einen Balkon?",
+          "answer": "Ja, wir haben einen kleinen Balkon."
+        },
+        {
+          "prompt": "Was steht auf deinem Schreibtisch?",
+          "answer": "Auf meinem Schreibtisch steht ein Computer."
+        },
+        {
+          "prompt": "Wer räumt dein Zimmer auf?",
+          "answer": "Ich räume mein Zimmer selbst auf."
+        },
+        {
+          "prompt": "Welche Hausarbeit machst du gern?",
+          "answer": "Ich decke gern den Tisch."
+        },
+        {
+          "prompt": "Welche Hausarbeit magst du nicht?",
+          "answer": "Ich putze nicht gern die Fenster."
+        },
+        {
+          "prompt": "Wo bewahrt ihr die Lebensmittel auf?",
+          "answer": "Wir bewahren sie im Kühlschrank auf."
+        },
+        {
+          "prompt": "Was hängt an eurer Wand?",
+          "answer": "An der Wand hängen Familienfotos."
+        },
+        {
+          "prompt": "Hast du Pflanzen zu Hause?",
+          "answer": "Ja, wir haben drei Pflanzen."
+        },
+        {
+          "prompt": "Welches Möbelstück benutzt du oft?",
+          "answer": "Ich benutze oft den Esstisch."
+        },
+        {
+          "prompt": "Wo liegen deine Schlüssel?",
+          "answer": "Meine Schlüssel liegen im Flur."
+        },
+        {
+          "prompt": "Was machst du im Wohnzimmer?",
+          "answer": "Ich lese und sehe fern."
+        },
+        {
+          "prompt": "Wie sieht eure Küche aus?",
+          "answer": "Sie ist hell und modern."
+        },
+        {
+          "prompt": "Was fehlt in deinem Traumhaus nicht?",
+          "answer": "Ein großer Garten darf nicht fehlen."
+        },
+        {
+          "prompt": "Wohnst du lieber in einer Wohnung oder einem Haus?",
+          "answer": "Ich wohne lieber in einem Haus."
+        },
+        {
+          "prompt": "Was hörst du gerade zu Hause?",
+          "answer": "Ich höre leise Musik."
+        },
+        {
+          "prompt": "Wo machst du deine Hausaufgaben?",
+          "answer": "Ich mache sie am Schreibtisch."
+        },
+        {
+          "prompt": "Wer gießt die Pflanzen?",
+          "answer": "Meine Tochter gießt die Pflanzen."
+        },
+        {
+          "prompt": "Was befindet sich neben deinem Bett?",
+          "answer": "Neben meinem Bett steht eine Lampe."
+        },
+        {
+          "prompt": "Wie oft putzt ihr die Wohnung?",
+          "answer": "Wir putzen einmal pro Woche."
+        },
+        {
+          "prompt": "Was machst du, wenn etwas kaputtgeht?",
+          "answer": "Ich versuche es zu reparieren."
+        },
+        {
+          "prompt": "Welcher Raum ist morgens am wichtigsten?",
+          "answer": "Die Küche ist morgens am wichtigsten."
+        },
+        {
+          "prompt": "Was würdest du zu Hause verändern?",
+          "answer": "Ich würde das Wohnzimmer größer machen."
+        },
+        {
+          "prompt": "Hast du einen Lieblingsplatz zu Hause?",
+          "answer": "Ja, mein Lieblingsplatz ist das Sofa."
+        },
+        {
+          "prompt": "Was macht ein Zuhause gemütlich?",
+          "answer": "Warme Lichter und Familie machen es gemütlich."
+        },
+        {
+          "prompt": "Beschreibe dein Zuhause mit drei Wörtern.",
+          "answer": "Es ist ruhig, hell und gemütlich."
+        }
+      ]
+    },
+    {
+      "id": "school-work",
+      "labels": {
+        "en": "School & Work",
+        "de": "Schule & Arbeit"
+      },
+      "questions": [
+        {
+          "prompt": "Gehst du zur Schule oder zur Arbeit?",
+          "answer": "Ich gehe zur Arbeit."
+        },
+        {
+          "prompt": "Was ist dein Lieblingsfach?",
+          "answer": "Mein Lieblingsfach ist Mathematik."
+        },
+        {
+          "prompt": "Welche Sprache lernst du?",
+          "answer": "Ich lerne Deutsch."
+        },
+        {
+          "prompt": "Was machst du in der Pause?",
+          "answer": "Ich esse etwas und spreche mit Freunden."
+        },
+        {
+          "prompt": "Wer ist dein Lieblingslehrer?",
+          "answer": "Meine Deutschlehrerin ist meine Lieblingslehrerin."
+        },
+        {
+          "prompt": "Was liegt in deiner Schultasche?",
+          "answer": "Darin liegen Bücher und Stifte."
+        },
+        {
+          "prompt": "Welche Aufgabe war heute leicht?",
+          "answer": "Die Rechenaufgabe war leicht."
+        },
+        {
+          "prompt": "Welche Aufgabe war heute schwierig?",
+          "answer": "Die Schreibaufgabe war schwierig."
+        },
+        {
+          "prompt": "Was hast du heute gelernt?",
+          "answer": "Ich habe neue Wörter gelernt."
+        },
+        {
+          "prompt": "Machst du gern Hausaufgaben?",
+          "answer": "Manchmal mache ich sie gern."
+        },
+        {
+          "prompt": "Wann beginnt deine Schule oder Arbeit?",
+          "answer": "Sie beginnt um acht Uhr."
+        },
+        {
+          "prompt": "Wann endet dein Schultag oder Arbeitstag?",
+          "answer": "Er endet um vier Uhr."
+        },
+        {
+          "prompt": "Wie kommst du zur Schule oder Arbeit?",
+          "answer": "Ich fahre mit dem Bus."
+        },
+        {
+          "prompt": "Mit wem arbeitest oder lernst du gern?",
+          "answer": "Ich lerne gern mit meiner Freundin."
+        },
+        {
+          "prompt": "Was brauchst du zum Lernen?",
+          "answer": "Ich brauche Ruhe und einen Stift."
+        },
+        {
+          "prompt": "Was kannst du besonders gut?",
+          "answer": "Ich kann gut rechnen."
+        },
+        {
+          "prompt": "Was möchtest du besser können?",
+          "answer": "Ich möchte besser Deutsch sprechen."
+        },
+        {
+          "prompt": "Wie sieht dein Arbeitsplatz aus?",
+          "answer": "Er ist ordentlich und hell."
+        },
+        {
+          "prompt": "Benutzt du einen Computer?",
+          "answer": "Ja, ich benutze jeden Tag einen Computer."
+        },
+        {
+          "prompt": "Wie viele Pausen hast du?",
+          "answer": "Ich habe zwei Pausen."
+        },
+        {
+          "prompt": "Was machst du, wenn du etwas nicht verstehst?",
+          "answer": "Ich frage nach Hilfe."
+        },
+        {
+          "prompt": "Welche Note macht dich stolz?",
+          "answer": "Eine Eins macht mich stolz."
+        },
+        {
+          "prompt": "Arbeitest du lieber allein oder im Team?",
+          "answer": "Ich arbeite lieber im Team."
+        },
+        {
+          "prompt": "Was war heute interessant?",
+          "answer": "Der Deutschunterricht war interessant."
+        },
+        {
+          "prompt": "Was war heute langweilig?",
+          "answer": "Die lange Besprechung war langweilig."
+        },
+        {
+          "prompt": "Welche Aufgabe möchtest du morgen erledigen?",
+          "answer": "Ich möchte meine Hausaufgaben fertig machen."
+        },
+        {
+          "prompt": "Wer hilft dir beim Lernen?",
+          "answer": "Meine Eltern helfen mir."
+        },
+        {
+          "prompt": "Was möchtest du später beruflich machen?",
+          "answer": "Ich möchte Ärztin werden."
+        },
+        {
+          "prompt": "Warum ist Lernen wichtig?",
+          "answer": "Lernen hilft uns, Neues zu verstehen."
+        },
+        {
+          "prompt": "Beschreibe einen guten Schultag oder Arbeitstag.",
+          "answer": "Er ist interessant, ruhig und erfolgreich."
+        }
+      ]
+    },
+    {
+      "id": "hobbies",
+      "labels": {
+        "en": "Hobbies",
+        "de": "Hobbys"
+      },
+      "questions": [
+        {
+          "prompt": "Was machst du in deiner Freizeit?",
+          "answer": "Ich lese und fahre Fahrrad."
+        },
+        {
+          "prompt": "Hast du ein Hobby?",
+          "answer": "Ja, mein Hobby ist Kochen."
+        },
+        {
+          "prompt": "Welchen Sport magst du?",
+          "answer": "Ich mag Schwimmen."
+        },
+        {
+          "prompt": "Spielst du ein Instrument?",
+          "answer": "Ja, ich spiele Klavier."
+        },
+        {
+          "prompt": "Liest du gern Bücher?",
+          "answer": "Ja, ich lese jeden Abend."
+        },
+        {
+          "prompt": "Welches Buch magst du besonders?",
+          "answer": "Ich mag Abenteuergeschichten."
+        },
+        {
+          "prompt": "Spielst du gern Brettspiele?",
+          "answer": "Ja, besonders mit meiner Familie."
+        },
+        {
+          "prompt": "Wie oft treibst du Sport?",
+          "answer": "Ich treibe zweimal pro Woche Sport."
+        },
+        {
+          "prompt": "Was malst oder bastelst du gern?",
+          "answer": "Ich male gern Tiere."
+        },
+        {
+          "prompt": "Hörst du gern Musik?",
+          "answer": "Ja, ich höre jeden Tag Musik."
+        },
+        {
+          "prompt": "Welche Musik magst du?",
+          "answer": "Ich mag Popmusik."
+        },
+        {
+          "prompt": "Tanzt du gern?",
+          "answer": "Ja, ich tanze sehr gern."
+        },
+        {
+          "prompt": "Sammelst du etwas?",
+          "answer": "Ich sammle Postkarten."
+        },
+        {
+          "prompt": "Was machst du draußen gern?",
+          "answer": "Ich gehe gern wandern."
+        },
+        {
+          "prompt": "Welches Hobby möchtest du ausprobieren?",
+          "answer": "Ich möchte fotografieren lernen."
+        },
+        {
+          "prompt": "Mit wem teilst du dein Hobby?",
+          "answer": "Ich teile es mit meiner Tochter."
+        },
+        {
+          "prompt": "Was brauchst du für dein Hobby?",
+          "answer": "Ich brauche Papier und Stifte."
+        },
+        {
+          "prompt": "Wann hast du Zeit für dein Hobby?",
+          "answer": "Am Wochenende habe ich Zeit."
+        },
+        {
+          "prompt": "Welches Hobby ist teuer?",
+          "answer": "Reiten kann teuer sein."
+        },
+        {
+          "prompt": "Welches Hobby kostet fast nichts?",
+          "answer": "Spazierengehen kostet nichts."
+        },
+        {
+          "prompt": "Was macht dir beim Hobby am meisten Spaß?",
+          "answer": "Ich kann dabei kreativ sein."
+        },
+        {
+          "prompt": "Hast du schon einmal etwas gewonnen?",
+          "answer": "Ja, ich habe ein Spiel gewonnen."
+        },
+        {
+          "prompt": "Was kannst du anderen beibringen?",
+          "answer": "Ich kann anderen Kochen beibringen."
+        },
+        {
+          "prompt": "Welches Hobby hattest du als Kind?",
+          "answer": "Als Kind habe ich gern Fußball gespielt."
+        },
+        {
+          "prompt": "Verbringst du deine Freizeit lieber drinnen oder draußen?",
+          "answer": "Ich bin lieber draußen."
+        },
+        {
+          "prompt": "Was machst du bei schlechtem Wetter?",
+          "answer": "Ich lese oder spiele ein Spiel."
+        },
+        {
+          "prompt": "Welches Hobby entspannt dich?",
+          "answer": "Lesen entspannt mich."
+        },
+        {
+          "prompt": "Welches Hobby ist gut für die Gesundheit?",
+          "answer": "Schwimmen ist gesund."
+        },
+        {
+          "prompt": "Warum sind Hobbys wichtig?",
+          "answer": "Sie machen Spaß und entspannen."
+        },
+        {
+          "prompt": "Beschreibe dein Lieblingshobby mit drei Wörtern.",
+          "answer": "Es ist kreativ, spannend und entspannend."
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "labels": {
+        "en": "Travel",
+        "de": "Reisen"
+      },
+      "questions": [
+        {
+          "prompt": "Wohin reist du gern?",
+          "answer": "Ich reise gern ans Meer."
+        },
+        {
+          "prompt": "Was war dein schönster Urlaub?",
+          "answer": "Mein schönster Urlaub war in Portugal."
+        },
+        {
+          "prompt": "Fährst du lieber mit dem Auto oder dem Zug?",
+          "answer": "Ich fahre lieber mit dem Zug."
+        },
+        {
+          "prompt": "Fliegst du gern?",
+          "answer": "Ja, aber nur bei kurzen Flügen."
+        },
+        {
+          "prompt": "Welches Land möchtest du besuchen?",
+          "answer": "Ich möchte Japan besuchen."
+        },
+        {
+          "prompt": "Was packst du in deinen Koffer?",
+          "answer": "Ich packe Kleidung und eine Zahnbürste ein."
+        },
+        {
+          "prompt": "Was darf im Urlaub nicht fehlen?",
+          "answer": "Eine Kamera darf nicht fehlen."
+        },
+        {
+          "prompt": "Reist du lieber im Sommer oder im Winter?",
+          "answer": "Ich reise lieber im Sommer."
+        },
+        {
+          "prompt": "Übernachtest du lieber im Hotel oder in einer Ferienwohnung?",
+          "answer": "Ich mag Ferienwohnungen lieber."
+        },
+        {
+          "prompt": "Was machst du gern am Strand?",
+          "answer": "Ich schwimme und baue Sandburgen."
+        },
+        {
+          "prompt": "Welche Stadt möchtest du sehen?",
+          "answer": "Ich möchte Berlin sehen."
+        },
+        {
+          "prompt": "Wie fragst du nach dem Weg?",
+          "answer": "Entschuldigung, wo ist der Bahnhof?"
+        },
+        {
+          "prompt": "Wie bestellst du ein Ticket?",
+          "answer": "Ein Ticket nach Wien, bitte."
+        },
+        {
+          "prompt": "Was machst du am Flughafen zuerst?",
+          "answer": "Ich gebe mein Gepäck ab."
+        },
+        {
+          "prompt": "Was nimmst du ins Handgepäck?",
+          "answer": "Ich nehme Wasser und ein Buch mit."
+        },
+        {
+          "prompt": "Mit wem reist du am liebsten?",
+          "answer": "Ich reise am liebsten mit meiner Familie."
+        },
+        {
+          "prompt": "Was isst du gern im Urlaub?",
+          "answer": "Ich probiere gern lokale Gerichte."
+        },
+        {
+          "prompt": "Welche Sprache sprichst du auf Reisen?",
+          "answer": "Ich spreche meistens Englisch."
+        },
+        {
+          "prompt": "Was war deine längste Reise?",
+          "answer": "Meine längste Reise dauerte zwei Wochen."
+        },
+        {
+          "prompt": "Magst du Berge oder Meer lieber?",
+          "answer": "Ich mag das Meer lieber."
+        },
+        {
+          "prompt": "Was fotografierst du im Urlaub?",
+          "answer": "Ich fotografiere Landschaften."
+        },
+        {
+          "prompt": "Was machst du, wenn du dich verirrst?",
+          "answer": "Ich frage nach dem Weg."
+        },
+        {
+          "prompt": "Welche Reise war besonders lustig?",
+          "answer": "Unsere Familienreise nach Madeira war lustig."
+        },
+        {
+          "prompt": "Was kaufst du als Souvenir?",
+          "answer": "Ich kaufe gern Magnete."
+        },
+        {
+          "prompt": "Wie bereitest du eine Reise vor?",
+          "answer": "Ich buche Unterkunft und plane die Route."
+        },
+        {
+          "prompt": "Was ist beim Reisen wichtig?",
+          "answer": "Ein Ausweis und gute Planung sind wichtig."
+        },
+        {
+          "prompt": "Welches Verkehrsmittel ist am bequemsten?",
+          "answer": "Der Zug ist für mich am bequemsten."
+        },
+        {
+          "prompt": "Was möchtest du auf deiner nächsten Reise machen?",
+          "answer": "Ich möchte wandern und schwimmen."
+        },
+        {
+          "prompt": "Warum reist du gern?",
+          "answer": "Ich entdecke gern neue Orte."
+        },
+        {
+          "prompt": "Beschreibe deinen Traumurlaub.",
+          "answer": "Mein Traumurlaub ist sonnig, ruhig und spannend."
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "labels": {
+        "en": "Shopping",
+        "de": "Einkaufen"
+      },
+      "questions": [
+        {
+          "prompt": "Gehst du gern einkaufen?",
+          "answer": "Ja, besonders auf dem Markt."
+        },
+        {
+          "prompt": "Was kaufst du jede Woche?",
+          "answer": "Ich kaufe Brot, Milch und Obst."
+        },
+        {
+          "prompt": "Wo kaufst du Lebensmittel?",
+          "answer": "Ich kaufe sie im Supermarkt."
+        },
+        {
+          "prompt": "Was kostet ein Brot ungefähr?",
+          "answer": "Es kostet ungefähr drei Euro."
+        },
+        {
+          "prompt": "Wie fragst du nach dem Preis?",
+          "answer": "Wie viel kostet das?"
+        },
+        {
+          "prompt": "Was möchtest du heute kaufen?",
+          "answer": "Ich möchte neue Schuhe kaufen."
+        },
+        {
+          "prompt": "Welche Kleidergröße hast du?",
+          "answer": "Ich habe Größe M."
+        },
+        {
+          "prompt": "Welche Farbe trägst du gern?",
+          "answer": "Ich trage gern Blau."
+        },
+        {
+          "prompt": "Probierst du Kleidung vor dem Kauf an?",
+          "answer": "Ja, ich probiere sie immer an."
+        },
+        {
+          "prompt": "Wie bezahlst du lieber?",
+          "answer": "Ich bezahle lieber mit Karte."
+        },
+        {
+          "prompt": "Was steht auf deiner Einkaufsliste?",
+          "answer": "Obst, Gemüse und Käse stehen darauf."
+        },
+        {
+          "prompt": "Kaufst du gern online ein?",
+          "answer": "Ja, manchmal kaufe ich online ein."
+        },
+        {
+          "prompt": "Was war dein letzter Einkauf?",
+          "answer": "Ich habe eine Jacke gekauft."
+        },
+        {
+          "prompt": "Was ist dir beim Einkaufen wichtig?",
+          "answer": "Gute Qualität ist mir wichtig."
+        },
+        {
+          "prompt": "Vergleichst du Preise?",
+          "answer": "Ja, ich vergleiche oft die Preise."
+        },
+        {
+          "prompt": "Was kaufst du nie?",
+          "answer": "Ich kaufe nie sehr teure Kleidung."
+        },
+        {
+          "prompt": "Welche Geschäfte besuchst du oft?",
+          "answer": "Ich besuche oft den Supermarkt."
+        },
+        {
+          "prompt": "Was sagst du an der Kasse?",
+          "answer": "Ich möchte mit Karte bezahlen."
+        },
+        {
+          "prompt": "Brauchst du eine Tüte?",
+          "answer": "Nein danke, ich habe eine Tasche."
+        },
+        {
+          "prompt": "Wie fragst du nach einer anderen Größe?",
+          "answer": "Haben Sie das auch in Größe M?"
+        },
+        {
+          "prompt": "Wie fragst du nach einer anderen Farbe?",
+          "answer": "Haben Sie das auch in Blau?"
+        },
+        {
+          "prompt": "Was kaufst du als Geschenk?",
+          "answer": "Ich kaufe ein Buch als Geschenk."
+        },
+        {
+          "prompt": "Für wen kaufst du gern Geschenke?",
+          "answer": "Ich kaufe gern Geschenke für meine Tochter."
+        },
+        {
+          "prompt": "Was hast du zuletzt im Angebot gekauft?",
+          "answer": "Ich habe Kaffee im Angebot gekauft."
+        },
+        {
+          "prompt": "Was ist besser: billig oder langlebig?",
+          "answer": "Langlebig ist meistens besser."
+        },
+        {
+          "prompt": "Kaufst du spontan oder nach Plan?",
+          "answer": "Ich kaufe meistens nach Plan."
+        },
+        {
+          "prompt": "Was würdest du mit hundert Euro kaufen?",
+          "answer": "Ich würde Bücher und Essen kaufen."
+        },
+        {
+          "prompt": "Was kann man auf einem Markt kaufen?",
+          "answer": "Man kann Obst, Gemüse und Käse kaufen."
+        },
+        {
+          "prompt": "Warum ist eine Einkaufsliste hilfreich?",
+          "answer": "Man vergisst weniger und kauft gezielter."
+        },
+        {
+          "prompt": "Beschreibe dein Lieblingsgeschäft.",
+          "answer": "Es ist groß, ordentlich und günstig."
+        }
+      ]
+    },
+    {
+      "id": "fun",
+      "labels": {
+        "en": "Fun",
+        "de": "Spaß"
+      },
+      "questions": [
+        {
+          "prompt": "Wenn du ein Tier wärst, welches wärst du?",
+          "answer": "Ich wäre ein Delfin."
+        },
+        {
+          "prompt": "Wenn du fliegen könntest, wohin würdest du fliegen?",
+          "answer": "Ich würde nach Italien fliegen."
+        },
+        {
+          "prompt": "Was würdest du machen, wenn du unsichtbar wärst?",
+          "answer": "Ich würde meine Freunde überraschen."
+        },
+        {
+          "prompt": "Welches Superheldentalent hättest du gern?",
+          "answer": "Ich würde gern fliegen können."
+        },
+        {
+          "prompt": "Wenn dein Haustier sprechen könnte, was würde es sagen?",
+          "answer": "Es würde nach Futter fragen."
+        },
+        {
+          "prompt": "Welche lustige Erfindung würdest du bauen?",
+          "answer": "Ich würde eine Hausaufgabenmaschine bauen."
+        },
+        {
+          "prompt": "Wenn du einen Tag lang König oder Königin wärst, was würdest du tun?",
+          "answer": "Ich würde allen Kindern Eis geben."
+        },
+        {
+          "prompt": "Welches Essen könnte jeden Tag vom Himmel fallen?",
+          "answer": "Pizza könnte vom Himmel fallen."
+        },
+        {
+          "prompt": "Wenn du auf dem Mond wohnen würdest, was würdest du vermissen?",
+          "answer": "Ich würde meine Familie vermissen."
+        },
+        {
+          "prompt": "Welche Farbe sollte der Himmel morgen haben?",
+          "answer": "Der Himmel sollte lila sein."
+        },
+        {
+          "prompt": "Wenn du mit einem Tier sprechen könntest, welches würdest du wählen?",
+          "answer": "Ich würde mit einem Hund sprechen."
+        },
+        {
+          "prompt": "Was wäre ein lustiger Name für einen Drachen?",
+          "answer": "Er könnte Flammenkeks heißen."
+        },
+        {
+          "prompt": "Wenn dein Bett fliegen könnte, wohin würdest du reisen?",
+          "answer": "Ich würde ans Meer fliegen."
+        },
+        {
+          "prompt": "Welche drei Dinge würdest du auf eine Zauberinsel mitnehmen?",
+          "answer": "Ich würde Essen, ein Buch und meine Familie mitnehmen."
+        },
+        {
+          "prompt": "Wenn du ein Geräusch erfinden könntest, wie würde es klingen?",
+          "answer": "Es würde wie Lachen und Musik klingen."
+        },
+        {
+          "prompt": "Welches Gemüse wäre der beste Superheld?",
+          "answer": "Die Karotte wäre ein guter Superheld."
+        },
+        {
+          "prompt": "Wenn du einen Roboter hättest, was sollte er tun?",
+          "answer": "Er sollte aufräumen und kochen."
+        },
+        {
+          "prompt": "Welche verrückte Regel würdest du für einen Tag einführen?",
+          "answer": "Alle müssten rückwärts gehen."
+        },
+        {
+          "prompt": "Wenn du sehr klein wärst, wo würdest du schlafen?",
+          "answer": "Ich würde in einer Tasse schlafen."
+        },
+        {
+          "prompt": "Wenn du sehr groß wärst, was würdest du zuerst machen?",
+          "answer": "Ich würde über die Häuser schauen."
+        },
+        {
+          "prompt": "Welche Sprache sollten Katzen sprechen?",
+          "answer": "Katzen sollten Deutsch sprechen."
+        },
+        {
+          "prompt": "Wenn du ein neues Fest erfinden könntest, was würde man feiern?",
+          "answer": "Man würde den Familientag feiern."
+        },
+        {
+          "prompt": "Was wäre ein lustiger Beruf für einen Pinguin?",
+          "answer": "Er könnte Eisverkäufer sein."
+        },
+        {
+          "prompt": "Wenn dein Frühstück lebendig wäre, was würde passieren?",
+          "answer": "Mein Brot würde vom Tisch laufen."
+        },
+        {
+          "prompt": "Welche Maschine sollte es unbedingt geben?",
+          "answer": "Eine Maschine, die Zimmer aufräumt."
+        },
+        {
+          "prompt": "Wenn du einen Planeten benennen dürftest, wie würde er heißen?",
+          "answer": "Er würde Lachland heißen."
+        },
+        {
+          "prompt": "Was würdest du tun, wenn du morgen in einem Schloss aufwachst?",
+          "answer": "Ich würde alle Zimmer erkunden."
+        },
+        {
+          "prompt": "Welche zwei Tiere würdest du miteinander mischen?",
+          "answer": "Ich würde einen Hund mit einem Adler mischen."
+        },
+        {
+          "prompt": "Was wäre das lustigste Schulfach?",
+          "answer": "Drachenfliegen wäre das lustigste Fach."
+        },
+        {
+          "prompt": "Erfinde eine kurze lustige Geschichte.",
+          "answer": "Ein Elefant fuhr mit dem Fahrrad zur Schule."
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "labels": {
+        "en": "Why?",
+        "de": "Warum?"
+      },
+      "questions": [
+        {
+          "prompt": "Warum lernst du Deutsch?",
+          "answer": "Ich lerne Deutsch, weil ich in Österreich lebe."
+        },
+        {
+          "prompt": "Warum ist Schlaf wichtig?",
+          "answer": "Schlaf ist wichtig, weil der Körper sich erholt."
+        },
+        {
+          "prompt": "Warum gehst du zur Schule oder zur Arbeit?",
+          "answer": "Ich gehe hin, um zu lernen und Aufgaben zu erledigen."
+        },
+        {
+          "prompt": "Warum magst du dein Lieblingsessen?",
+          "answer": "Ich mag es, weil es gut schmeckt."
+        },
+        {
+          "prompt": "Warum trinkst du Wasser?",
+          "answer": "Ich trinke Wasser, weil es gesund ist."
+        },
+        {
+          "prompt": "Warum ist Bewegung wichtig?",
+          "answer": "Bewegung hält uns fit."
+        },
+        {
+          "prompt": "Warum brauchst du Freunde?",
+          "answer": "Freunde helfen uns und machen uns glücklich."
+        },
+        {
+          "prompt": "Warum sollte man pünktlich sein?",
+          "answer": "Pünktlichkeit zeigt Respekt."
+        },
+        {
+          "prompt": "Warum räumst du dein Zimmer auf?",
+          "answer": "Ich räume auf, damit ich alles finde."
+        },
+        {
+          "prompt": "Warum liest du Bücher?",
+          "answer": "Ich lese, weil ich neue Dinge lerne."
+        },
+        {
+          "prompt": "Warum feiern Menschen Geburtstage?",
+          "answer": "Sie feiern das neue Lebensjahr."
+        },
+        {
+          "prompt": "Warum ist Familie wichtig?",
+          "answer": "Familie gibt Liebe und Unterstützung."
+        },
+        {
+          "prompt": "Warum sollte man Gemüse essen?",
+          "answer": "Gemüse enthält viele Vitamine."
+        },
+        {
+          "prompt": "Warum lachst du gern?",
+          "answer": "Lachen macht gute Laune."
+        },
+        {
+          "prompt": "Warum gehst du gern auf Reisen?",
+          "answer": "Ich entdecke gern neue Orte."
+        },
+        {
+          "prompt": "Warum braucht man Geld?",
+          "answer": "Man braucht Geld, um Dinge zu bezahlen."
+        },
+        {
+          "prompt": "Warum sollte man anderen helfen?",
+          "answer": "Hilfe macht das Zusammenleben besser."
+        },
+        {
+          "prompt": "Warum ist Ehrlichkeit wichtig?",
+          "answer": "Ehrlichkeit schafft Vertrauen."
+        },
+        {
+          "prompt": "Warum gehst du gern nach draußen?",
+          "answer": "Draußen bekomme ich frische Luft."
+        },
+        {
+          "prompt": "Warum lernst du neue Wörter?",
+          "answer": "Ich möchte besser sprechen."
+        },
+        {
+          "prompt": "Warum ist Übung wichtig?",
+          "answer": "Durch Übung wird man besser."
+        },
+        {
+          "prompt": "Warum sollte man die Natur schützen?",
+          "answer": "Wir brauchen eine gesunde Umwelt."
+        },
+        {
+          "prompt": "Warum magst du Musik?",
+          "answer": "Musik entspannt mich."
+        },
+        {
+          "prompt": "Warum kochst du gern oder nicht gern?",
+          "answer": "Ich koche gern, weil es kreativ ist."
+        },
+        {
+          "prompt": "Warum sollte man sich entschuldigen?",
+          "answer": "Eine Entschuldigung zeigt, dass es einem leidtut."
+        },
+        {
+          "prompt": "Warum braucht man Pausen?",
+          "answer": "Pausen geben neue Energie."
+        },
+        {
+          "prompt": "Warum ist Teamarbeit hilfreich?",
+          "answer": "Gemeinsam findet man oft bessere Lösungen."
+        },
+        {
+          "prompt": "Warum sollte man Fragen stellen?",
+          "answer": "Fragen helfen uns, etwas zu verstehen."
+        },
+        {
+          "prompt": "Warum bist du heute glücklich?",
+          "answer": "Ich bin glücklich, weil ich Zeit mit meiner Familie habe."
+        },
+        {
+          "prompt": "Warum möchtest du morgen wieder spielen?",
+          "answer": "Ich möchte spielen, weil es Spaß macht."
+        }
+      ]
+    },
+    {
+      "id": "would-you",
+      "labels": {
+        "en": "What would you...?",
+        "de": "Was würdest du...?"
+      },
+      "questions": [
+        {
+          "prompt": "Was würdest du mit einer Million Euro machen?",
+          "answer": "Ich würde ein Haus kaufen und reisen."
+        },
+        {
+          "prompt": "Welches Haustier würdest du wählen?",
+          "answer": "Ich würde einen Hund wählen."
+        },
+        {
+          "prompt": "Wen würdest du gern treffen?",
+          "answer": "Ich würde einen berühmten Koch treffen."
+        },
+        {
+          "prompt": "Welche Sprache würdest du gern sprechen?",
+          "answer": "Ich würde gern Spanisch sprechen."
+        },
+        {
+          "prompt": "Wohin würdest du morgen reisen?",
+          "answer": "Ich würde nach Italien reisen."
+        },
+        {
+          "prompt": "Was würdest du auf eine einsame Insel mitnehmen?",
+          "answer": "Ich würde Wasser, Essen und ein Messer mitnehmen."
+        },
+        {
+          "prompt": "Welchen Beruf würdest du gern ausprobieren?",
+          "answer": "Ich würde gern Pilot sein."
+        },
+        {
+          "prompt": "Was würdest du an deinem Zuhause verändern?",
+          "answer": "Ich würde einen größeren Balkon bauen."
+        },
+        {
+          "prompt": "Welches Instrument würdest du gern lernen?",
+          "answer": "Ich würde gern Gitarre lernen."
+        },
+        {
+          "prompt": "Was würdest du kochen, wenn Gäste kommen?",
+          "answer": "Ich würde Pasta kochen."
+        },
+        {
+          "prompt": "Welchen Film würdest du gern noch einmal sehen?",
+          "answer": "Ich würde meinen Lieblingsfilm noch einmal sehen."
+        },
+        {
+          "prompt": "Was würdest du tun, wenn du einen freien Tag hättest?",
+          "answer": "Ich würde ausschlafen und spazieren gehen."
+        },
+        {
+          "prompt": "Welches Buch würdest du empfehlen?",
+          "answer": "Ich würde ein spannendes Abenteuerbuch empfehlen."
+        },
+        {
+          "prompt": "Welche drei Dinge würdest du niemals weggeben?",
+          "answer": "Ich würde meine Fotos, Bücher und Erinnerungen behalten."
+        },
+        {
+          "prompt": "Was würdest du tun, wenn du dich verirrst?",
+          "answer": "Ich würde nach dem Weg fragen."
+        },
+        {
+          "prompt": "Welche Stadt würdest du gern bewohnen?",
+          "answer": "Ich würde gern in Wien wohnen."
+        },
+        {
+          "prompt": "Was würdest du lernen, wenn du mehr Zeit hättest?",
+          "answer": "Ich würde besser Klavier spielen lernen."
+        },
+        {
+          "prompt": "Welches Essen würdest du jeden Tag essen?",
+          "answer": "Ich würde jeden Tag Obst essen."
+        },
+        {
+          "prompt": "Was würdest du tun, wenn du nicht arbeiten müsstest?",
+          "answer": "Ich würde mehr Zeit mit meiner Familie verbringen."
+        },
+        {
+          "prompt": "Welche Jahreszeit würdest du verlängern?",
+          "answer": "Ich würde den Sommer verlängern."
+        },
+        {
+          "prompt": "Was würdest du jemandem zum Geburtstag schenken?",
+          "answer": "Ich würde ein persönliches Geschenk schenken."
+        },
+        {
+          "prompt": "Welches Problem würdest du gern lösen?",
+          "answer": "Ich würde gern weniger Müll produzieren."
+        },
+        {
+          "prompt": "Was würdest du tun, wenn du berühmt wärst?",
+          "answer": "Ich würde gute Projekte unterstützen."
+        },
+        {
+          "prompt": "Welche Regel würdest du in der Schule ändern?",
+          "answer": "Ich würde längere Pausen einführen."
+        },
+        {
+          "prompt": "Was würdest du gern besser können?",
+          "answer": "Ich würde gern fließend Deutsch sprechen."
+        },
+        {
+          "prompt": "Welches Abenteuer würdest du gern erleben?",
+          "answer": "Ich würde gern eine Safari machen."
+        },
+        {
+          "prompt": "Was würdest du tun, wenn du keine Angst hättest?",
+          "answer": "Ich würde etwas ganz Neues ausprobieren."
+        },
+        {
+          "prompt": "Welche Person würdest du um Rat fragen?",
+          "answer": "Ich würde meine Mutter um Rat fragen."
+        },
+        {
+          "prompt": "Was würdest du morgen anders machen?",
+          "answer": "Ich würde früher aufstehen."
+        },
+        {
+          "prompt": "Wie würdest du deinen perfekten Tag verbringen?",
+          "answer": "Ich würde mit meiner Familie reisen, essen und lachen."
+        }
+      ]
+    }
+  ]
+}

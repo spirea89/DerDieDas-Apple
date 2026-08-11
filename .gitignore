@@ -1,0 +1,25 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+*.xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+timeline.xctimeline
+playground.xcworkspace
+
+# macOS
+.DS_Store
+
+# SwiftPM
+.build/
+.swiftpm/
+
+# CocoaPods / Carthage (unused, but ignore if added)
+Pods/
+Carthage/Build/
+__pycache__/
+*.pyc

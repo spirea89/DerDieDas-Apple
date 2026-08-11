@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F10000000000000000000001 /* DerDieDasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000001 /* DerDieDasApp.swift */; };
+		F10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000002 /* ContentView.swift */; };
+		F10000000000000000000003 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000003 /* AppTheme.swift */; };
+		F10000000000000000000004 /* ArticleWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000004 /* ArticleWord.swift */; };
+		F10000000000000000000005 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000005 /* GameView.swift */; };
+		F10000000000000000000006 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000006 /* GameViewModel.swift */; };
+		F10000000000000000000007 /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000007 /* ScoreboardView.swift */; };
+		F10000000000000000000008 /* CelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000008 /* CelebrationView.swift */; };
+		F10000000000000000000009 /* ConfigureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000009 /* ConfigureView.swift */; };
+		F10000000000000000000010 /* ConfigureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000010 /* ConfigureViewModel.swift */; };
+		F10000000000000000000011 /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* WordStore.swift */; };
+		F10000000000000000000012 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* SpeechService.swift */; };
+		F10000000000000000000013 /* GermanText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* GermanText.swift */; };
+		F10000000000000000000014 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000014 /* words.json */; };
+		F10000000000000000000015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000015 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000001 /* DerDieDasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerDieDasApp.swift; sourceTree = "<group>"; };
+		A10000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A10000000000000000000003 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		A10000000000000000000004 /* ArticleWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWord.swift; sourceTree = "<group>"; };
+		A10000000000000000000005 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		A10000000000000000000006 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		A10000000000000000000007 /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
+		A10000000000000000000008 /* CelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationView.swift; sourceTree = "<group>"; };
+		A10000000000000000000009 /* ConfigureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureView.swift; sourceTree = "<group>"; };
+		A10000000000000000000010 /* ConfigureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViewModel.swift; sourceTree = "<group>"; };
+		A10000000000000000000011 /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
+		A10000000000000000000012 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
+		A10000000000000000000013 /* GermanText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanText.swift; sourceTree = "<group>"; };
+		A10000000000000000000014 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		A10000000000000000000015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10000000000000000000016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000001 /* Der Die Das.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Der Die Das.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C10000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D10000000000000000000009 /* content */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000014 /* words.json */,
+			);
+			path = content;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000008 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D10000000000000000000009 /* content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000003 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000003 /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000004 /* ArticleWord.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000005 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000008 /* CelebrationView.swift */,
+				A10000000000000000000005 /* GameView.swift */,
+				A10000000000000000000006 /* GameViewModel.swift */,
+				A10000000000000000000007 /* ScoreboardView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000006 /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000009 /* ConfigureView.swift */,
+				A10000000000000000000010 /* ConfigureViewModel.swift */,
+			);
+			path = Configure;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000007 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000013 /* GermanText.swift */,
+				A10000000000000000000012 /* SpeechService.swift */,
+				A10000000000000000000011 /* WordStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000002 /* DerDieDas */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000002 /* ContentView.swift */,
+				A10000000000000000000001 /* DerDieDasApp.swift */,
+				D10000000000000000000003 /* Theme */,
+				D10000000000000000000004 /* Models */,
+				D10000000000000000000006 /* Configure */,
+				D10000000000000000000005 /* Game */,
+				D10000000000000000000007 /* Services */,
+				D10000000000000000000008 /* Resources */,
+				A10000000000000000000015 /* Assets.xcassets */,
+				A10000000000000000000016 /* Info.plist */,
+			);
+			path = DerDieDas;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000001 /* Der Die Das.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				D10000000000000000000002 /* DerDieDas */,
+				D10000000000000000000010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B10000000000000000000002 /* DerDieDas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E10000000000000000000002 /* Build configuration list for PBXNativeTarget "DerDieDas" */;
+			buildPhases = (
+				C10000000000000000000001 /* Sources */,
+				C10000000000000000000002 /* Frameworks */,
+				C10000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DerDieDas;
+			productName = DerDieDas;
+			productReference = B10000000000000000000001 /* Der Die Das.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B10000000000000000000003 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B10000000000000000000002 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = E10000000000000000000001 /* Build configuration list for PBXProject "DerDieDas" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = D10000000000000000000001;
+			productRefGroup = D10000000000000000000010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B10000000000000000000002 /* DerDieDas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C10000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10000000000000000000015 /* Assets.xcassets in Resources */,
+				F10000000000000000000014 /* words.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C10000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10000000000000000000001 /* DerDieDasApp.swift in Sources */,
+				F10000000000000000000002 /* ContentView.swift in Sources */,
+				F10000000000000000000003 /* AppTheme.swift in Sources */,
+				F10000000000000000000004 /* ArticleWord.swift in Sources */,
+				F10000000000000000000005 /* GameView.swift in Sources */,
+				F10000000000000000000006 /* GameViewModel.swift in Sources */,
+				F10000000000000000000007 /* ScoreboardView.swift in Sources */,
+				F10000000000000000000008 /* CelebrationView.swift in Sources */,
+				F10000000000000000000009 /* ConfigureView.swift in Sources */,
+				F10000000000000000000010 /* ConfigureViewModel.swift in Sources */,
+				F10000000000000000000011 /* WordStore.swift in Sources */,
+				F10000000000000000000012 /* SpeechService.swift in Sources */,
+				F10000000000000000000013 /* GermanText.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E10000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				ENABLE_TESTABILITY = YES;
+			};
+			name = Debug;
+		};
+		E10000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E10000000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DerDieDas/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spirea89.DerDieDas;
+				PRODUCT_NAME = "Der Die Das";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+			};
+			name = Debug;
+		};
+		E10000000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DerDieDas/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spirea89.DerDieDas;
+				PRODUCT_NAME = "Der Die Das";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E10000000000000000000001 /* Build configuration list for PBXProject "DerDieDas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E10000000000000000000003 /* Debug */,
+				E10000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E10000000000000000000002 /* Build configuration list for PBXNativeTarget "DerDieDas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E10000000000000000000005 /* Debug */,
+				E10000000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B10000000000000000000003 /* Project object */;
+}
