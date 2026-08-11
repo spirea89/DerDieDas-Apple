@@ -36,7 +36,7 @@ struct GameView: View {
         VStack(alignment: .leading, spacing: 18) {
             brandHero
 
-            Text("Practice German articles out loud. The app says the noun — answer by speaking der, die, or das plus the word. No typing.")
+            Text("Practice German articles out loud. The app says the noun — answer by speaking der, die, or das plus the word. No typing. Best on a real iPhone (simulator mic is unreliable).")
                 .font(AppTheme.bodyFont)
                 .foregroundStyle(AppTheme.muted)
                 .fixedSize(horizontal: false, vertical: true)

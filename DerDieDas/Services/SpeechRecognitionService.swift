@@ -2,7 +2,7 @@ import AVFoundation
 import Foundation
 import Speech
 
-/// Listens for German spoken answers (e.g. "die Sonne") using on-device / Apple Speech.
+/// Listens for German spoken answers (e.g. "die Sonne") using Apple Speech.
 @MainActor
 final class SpeechRecognitionService: NSObject, ObservableObject {
     @Published private(set) var isListening = false
@@ -10,8 +10,8 @@ final class SpeechRecognitionService: NSObject, ObservableObject {
     @Published private(set) var authorizationDenied = false
     @Published private(set) var statusMessage: String?
 
-    private let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "de-DE"))
-    private let audioEngine = AVAudioEngine()
+    private var speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "de-DE"))
+    private var audioEngine = AVAudioEngine()
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private var silenceTask: Task<Void, Never>?
@@ -20,7 +20,7 @@ final class SpeechRecognitionService: NSObject, ObservableObject {
     var onTranscript: ((String, Bool) -> Void)?
 
     var isAvailable: Bool {
-        recognizer?.isAvailable == true
+        ensureRecognizer().map(\.isAvailable) == true
     }
 
     func requestAuthorizationIfNeeded() async -> Bool {
@@ -52,17 +52,31 @@ final class SpeechRecognitionService: NSObject, ObservableObject {
     func startListening() async {
         guard !isListening else { return }
         guard await requestAuthorizationIfNeeded() else { return }
-        guard let recognizer, recognizer.isAvailable else {
-            statusMessage = "German speech recognition is unavailable on this device."
+
+        guard let recognizer = ensureRecognizer() else {
+            statusMessage = "German speech recognition is not supported on this device."
+            return
+        }
+        guard recognizer.isAvailable else {
+            statusMessage = "German speech recognition is temporarily unavailable. Check network or try again."
             return
         }
 
         stopListening(resetTranscript: true)
+        resetAudioEngine()
 
         do {
             try configureAudioSessionForRecognition()
         } catch {
-            statusMessage = "Could not start the microphone."
+            statusMessage = "Could not activate the microphone: \(error.localizedDescription)"
+            return
+        }
+
+        // Touch input node only after the session is active.
+        let inputNode = audioEngine.inputNode
+        let hardwareFormat = inputNode.inputFormat(forBus: 0)
+        guard hardwareFormat.sampleRate > 0, hardwareFormat.channelCount > 0 else {
+            statusMessage = simulatorOrMicHint()
             return
         }
 
@@ -72,12 +86,18 @@ final class SpeechRecognitionService: NSObject, ObservableObject {
         if #available(iOS 16, *) {
             request.addsPunctuation = false
         }
+        // Helps the recognizer bias toward short German article answers.
+        request.contextualStrings = ["der", "die", "das"]
         recognitionRequest = request
 
-        let inputNode = audioEngine.inputNode
-        let format = inputNode.outputFormat(forBus: 0)
+        let tapFormat = inputNode.outputFormat(forBus: 0)
+        guard tapFormat.sampleRate > 0, tapFormat.channelCount > 0 else {
+            statusMessage = simulatorOrMicHint()
+            return
+        }
+
         inputNode.removeTap(onBus: 0)
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: format) { buffer, _ in
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: tapFormat) { buffer, _ in
             request.append(buffer)
         }
 
@@ -94,8 +114,14 @@ final class SpeechRecognitionService: NSObject, ObservableObject {
                         self.scheduleSilenceFinalize(after: 1.1)
                     }
                 }
-                if error != nil, self.isListening {
-                    // End of utterance / cancellation is normal; keep last transcript.
+
+                if let error, self.isListening {
+                    let nsError = error as NSError
+                    // Cancellation / no-speech end are expected when we stop intentionally.
+                    let ignored = nsError.domain == "kAFAssistantErrorDomain" && (nsError.code == 216 || nsError.code == 203)
+                    if !ignored, self.transcript.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                        self.statusMessage = "Listening stopped: \(error.localizedDescription)"
+                    }
                     self.stopListening(resetTranscript: false)
                 }
             }
@@ -108,7 +134,7 @@ final class SpeechRecognitionService: NSObject, ObservableObject {
             statusMessage = nil
         } catch {
             stopListening(resetTranscript: true)
-            statusMessage = "Could not start listening."
+            statusMessage = "Could not start the mic: \(error.localizedDescription)"
         }
     }
 
@@ -120,14 +146,42 @@ final class SpeechRecognitionService: NSObject, ObservableObject {
             audioEngine.stop()
         }
         audioEngine.inputNode.removeTap(onBus: 0)
+
         recognitionRequest?.endAudio()
         recognitionRequest = nil
+
+        recognitionTask?.finish()
         recognitionTask?.cancel()
         recognitionTask = nil
+
         isListening = false
         if resetTranscript {
             transcript = ""
         }
+    }
+
+    private func ensureRecognizer() -> SFSpeechRecognizer? {
+        if let speechRecognizer, speechRecognizer.locale.identifier.lowercased().hasPrefix("de") {
+            return speechRecognizer
+        }
+        // Fallbacks if de-DE assets are missing.
+        for identifier in ["de-DE", "de-AT", "de-CH", "de"] {
+            if let candidate = SFSpeechRecognizer(locale: Locale(identifier: identifier)), candidate.isAvailable {
+                speechRecognizer = candidate
+                return candidate
+            }
+        }
+        speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "de-DE"))
+        return speechRecognizer
+    }
+
+    private func resetAudioEngine() {
+        if audioEngine.isRunning {
+            audioEngine.stop()
+        }
+        audioEngine.inputNode.removeTap(onBus: 0)
+        audioEngine.reset()
+        audioEngine = AVAudioEngine()
     }
 
     private func scheduleSilenceFinalize(after delay: TimeInterval) {
@@ -156,5 +210,13 @@ final class SpeechRecognitionService: NSObject, ObservableObject {
         let session = AVAudioSession.sharedInstance()
         try session.setCategory(.playAndRecord, mode: .measurement, options: [.defaultToSpeaker, .duckOthers])
         try session.setActive(true, options: .notifyOthersOnDeactivation)
+    }
+
+    private func simulatorOrMicHint() -> String {
+        #if targetEnvironment(simulator)
+        return "Simulator mic is unavailable (common on iOS 17+). Please try on a real iPhone."
+        #else
+        return "Microphone is not ready yet. Tap Listen again, or check Settings → Der Die Das."
+        #endif
     }
 }

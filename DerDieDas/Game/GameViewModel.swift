@@ -179,6 +179,7 @@ final class GameViewModel: ObservableObject {
         stopRecognizer(resetTranscript: true)
         liveTranscript = ""
         isAwaitingSpeech = false
+        hasResolvedCurrentAnswer = false
         isSpeakingPrompt = true
         recognitionHint = "Listen…"
 
@@ -187,7 +188,7 @@ final class GameViewModel: ObservableObject {
             await self.speech.speakGerman(word)
             guard !Task.isCancelled, self.roundToken == token, self.gameStarted, !self.gameOver else { return }
             // Brief gap so TTS audio does not bleed into recognition.
-            try? await Task.sleep(nanoseconds: 280_000_000)
+            try? await Task.sleep(nanoseconds: 350_000_000)
             guard !Task.isCancelled, self.roundToken == token else { return }
             self.isSpeakingPrompt = false
             await self.startListening(token: token)
