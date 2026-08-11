@@ -150,7 +150,6 @@ final class SpeechRecognitionService: NSObject, ObservableObject {
         recognitionRequest?.endAudio()
         recognitionRequest = nil
 
-        recognitionTask?.finish()
         recognitionTask?.cancel()
         recognitionTask = nil
 
