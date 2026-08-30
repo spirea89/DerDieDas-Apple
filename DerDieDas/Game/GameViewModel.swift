@@ -194,7 +194,7 @@ final class GameViewModel: ObservableObject {
         isAwaitingSpeech = false
         hasResolvedCurrentAnswer = false
         isSpeakingPrompt = true
-        recognitionHint = "Listen…"
+        recognitionHint = "Listen to the word…"
 
         listenTask = Task { [weak self] in
             guard let self else { return }
@@ -205,6 +205,9 @@ final class GameViewModel: ObservableObject {
             try? await Task.sleep(nanoseconds: UInt64(gap * 1_000_000_000))
             guard !Task.isCancelled, self.roundToken == token else { return }
             self.isSpeakingPrompt = false
+            self.recognitionHint = "Wait for the beep…"
+            await self.speech.playSpeakCue()
+            guard !Task.isCancelled, self.roundToken == token, self.gameStarted, !self.gameOver else { return }
             await self.startListening(token: token)
         }
     }
@@ -216,13 +219,16 @@ final class GameViewModel: ObservableObject {
         isSpeakingPrompt = false
         listenTask = Task { [weak self] in
             guard let self else { return }
+            self.recognitionHint = "Wait for the beep…"
+            await self.speech.playSpeakCue()
+            guard !Task.isCancelled, self.roundToken == token, self.gameStarted, !self.gameOver else { return }
             await self.startListening(token: token)
         }
     }
 
     private func startListening(token: UUID) async {
         guard roundToken == token, gameStarted, !gameOver, !hasResolvedCurrentAnswer else { return }
-        recognitionHint = "Say the article and the word…"
+        recognitionHint = "Your turn — say der/die/das + word"
         isAwaitingSpeech = true
         await recognizer.startListening()
         syncRecognizerState()

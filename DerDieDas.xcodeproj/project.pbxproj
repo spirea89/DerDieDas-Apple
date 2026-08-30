@@ -22,6 +22,7 @@
 		F10000000000000000000016 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000017 /* SpeechRecognitionService.swift */; };
 		F10000000000000000000014 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000014 /* words.json */; };
 		F10000000000000000000015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000015 /* Assets.xcassets */; };
+		F10000000000000000000018 /* speak-cue.wav in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000018 /* speak-cue.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A10000000000000000000014 /* words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		A10000000000000000000015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10000000000000000000016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10000000000000000000018 /* speak-cue.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "speak-cue.wav"; sourceTree = "<group>"; };
 		B10000000000000000000001 /* Der Die Das.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Der Die Das.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				D10000000000000000000009 /* content */,
+				A10000000000000000000018 /* speak-cue.wav */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				F10000000000000000000015 /* Assets.xcassets in Resources */,
 				F10000000000000000000014 /* words.json in Resources */,
+				F10000000000000000000018 /* speak-cue.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,3 +1,4 @@
+import AudioToolbox
 import AVFoundation
 import Foundation
 
@@ -6,10 +7,13 @@ final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
     private let synthesizer = AVSpeechSynthesizer()
     private var speakContinuation: CheckedContinuation<Void, Never>?
     private var speakTimeoutTask: Task<Void, Never>?
+    private var cuePlayer: AVAudioPlayer?
+    private var cueContinuation: CheckedContinuation<Void, Never>?
 
     override init() {
         super.init()
         synthesizer.delegate = self
+        prepareSpeakCue()
     }
 
     func speakGerman(_ prompt: String, rateMultiplier: Float = 0.88) async {
@@ -44,11 +48,43 @@ final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
         Task { await speakGerman(prompt, rateMultiplier: rateMultiplier) }
     }
 
+    /// Short chime meaning: mic is about to open — say the article + word now.
+    func playSpeakCue() async {
+        configureAudioSessionForPlayback()
+        guard let player = cuePlayer else {
+            // Fallback beep via system sound if the bundled cue is missing.
+            AudioServicesPlaySystemSound(1057)
+            try? await Task.sleep(nanoseconds: 220_000_000)
+            return
+        }
+
+        player.stop()
+        player.currentTime = 0
+        player.volume = 1.0
+
+        await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>) in
+            cueContinuation?.resume()
+            cueContinuation = continuation
+            player.play()
+            // Safety timeout slightly longer than the cue.
+            Task { [weak self] in
+                try? await Task.sleep(nanoseconds: 500_000_000)
+                await MainActor.run {
+                    self?.finishCueWait()
+                }
+            }
+        }
+        // Tiny beat so the ding has settled before the mic opens.
+        try? await Task.sleep(nanoseconds: 120_000_000)
+    }
+
     func cancel() {
         speakTimeoutTask?.cancel()
         speakTimeoutTask = nil
         synthesizer.stopSpeaking(at: .immediate)
         finishSpeakWait()
+        cuePlayer?.stop()
+        finishCueWait()
     }
 
     nonisolated func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
@@ -70,6 +106,23 @@ final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
         speakContinuation = nil
     }
 
+    private func finishCueWait() {
+        cueContinuation?.resume()
+        cueContinuation = nil
+    }
+
+    private func prepareSpeakCue() {
+        guard let url = Bundle.main.url(forResource: "speak-cue", withExtension: "wav") else { return }
+        do {
+            let player = try AVAudioPlayer(contentsOf: url)
+            player.delegate = self
+            player.prepareToPlay()
+            cuePlayer = player
+        } catch {
+            cuePlayer = nil
+        }
+    }
+
     private func configureAudioSessionForPlayback() {
         let session = AVAudioSession.sharedInstance()
         do {
@@ -86,5 +139,13 @@ final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
             return enhanced
         }
         return AVSpeechSynthesisVoice(language: "de-DE") ?? voices.first
+    }
+}
+
+extension SpeechService: AVAudioPlayerDelegate {
+    nonisolated func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        Task { @MainActor in
+            self.finishCueWait()
+        }
     }
 }

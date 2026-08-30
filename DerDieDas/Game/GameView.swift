@@ -36,7 +36,7 @@ struct GameView: View {
         VStack(alignment: .leading, spacing: 18) {
             brandHero
 
-            Text("Practice German articles out loud. The app says the noun — answer by speaking der, die, or das plus the word. No typing. Best on a real iPhone (simulator mic is unreliable).")
+            Text("Practice German articles out loud. The app says the noun, then beeps when it is your turn — answer with der, die, or das plus the word. No typing. Best on a real iPhone.")
                 .font(AppTheme.bodyFont)
                 .foregroundStyle(AppTheme.muted)
                 .fixedSize(horizontal: false, vertical: true)
@@ -268,7 +268,7 @@ struct GameView: View {
                 .id(viewModel.currentWord?.id)
                 .transition(.asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity), removal: .opacity))
 
-            Text("Say the article + this word out loud")
+            Text("Wait for the beep, then say der/die/das + this word")
                 .font(AppTheme.bodyFont)
                 .foregroundStyle(AppTheme.muted)
         }
@@ -346,7 +346,10 @@ struct GameView: View {
 
     private var statusTitle: String {
         if viewModel.isSpeakingPrompt { return "Hearing the word" }
-        if viewModel.isListening { return "Listening" }
+        if viewModel.recognitionHint?.localizedCaseInsensitiveContains("beep") == true {
+            return "Get ready"
+        }
+        if viewModel.isListening { return "Your turn" }
         switch viewModel.feedback {
         case .correct: return "Correct"
         case .incorrect: return "Not quite"
