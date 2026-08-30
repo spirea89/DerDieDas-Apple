@@ -8,6 +8,7 @@ final class GameViewModel: ObservableObject {
     @Published var playerNames: [String] = ["Player 1"]
     @Published var roundLimit = 10
     @Published var gameSpeed: GameSpeed = .normal
+    @Published var answerMode: AnswerMode = .articleAndWord
     @Published var players: [Player] = []
     @Published var currentPlayerIndex = 0
     @Published var gameStarted = false
@@ -36,6 +37,7 @@ final class GameViewModel: ObservableObject {
     private var hasResolvedCurrentAnswer = false
     private var cancellables = Set<AnyCancellable>()
     private let speedDefaultsKey = "derDieDas.gameSpeed"
+    private let answerModeDefaultsKey = "derDieDas.answerMode"
 
     let roundOptions = [5, 10, 15, 20, 30]
 
@@ -44,6 +46,10 @@ final class GameViewModel: ObservableObject {
         if let saved = UserDefaults.standard.string(forKey: speedDefaultsKey),
            let speed = GameSpeed(rawValue: saved) {
             gameSpeed = speed
+        }
+        if let saved = UserDefaults.standard.string(forKey: answerModeDefaultsKey),
+           let mode = AnswerMode(rawValue: saved) {
+            answerMode = mode
         }
         recognizer.onTranscript = { [weak self] text, isFinal in
             self?.handleTranscript(text, isFinal: isFinal)
@@ -61,6 +67,13 @@ final class GameViewModel: ObservableObject {
             .sink { [weak self] speed in
                 guard let self else { return }
                 UserDefaults.standard.set(speed.rawValue, forKey: self.speedDefaultsKey)
+            }
+            .store(in: &cancellables)
+        $answerMode
+            .dropFirst()
+            .sink { [weak self] mode in
+                guard let self else { return }
+                UserDefaults.standard.set(mode.rawValue, forKey: self.answerModeDefaultsKey)
             }
             .store(in: &cancellables)
     }
@@ -228,7 +241,7 @@ final class GameViewModel: ObservableObject {
 
     private func startListening(token: UUID) async {
         guard roundToken == token, gameStarted, !gameOver, !hasResolvedCurrentAnswer else { return }
-        recognitionHint = "Your turn — say der/die/das + word"
+        recognitionHint = answerMode.yourTurnHint
         isAwaitingSpeech = true
         await recognizer.startListening()
         syncRecognizerState()
@@ -239,7 +252,7 @@ final class GameViewModel: ObservableObject {
             isAwaitingSpeech = false
             recognitionHint = recognizer.statusMessage ?? "Could not start listening."
         } else {
-            recognitionHint = "Listening… say der/die/das + word"
+            recognitionHint = answerMode.listeningHint
         }
     }
 
@@ -260,8 +273,8 @@ final class GameViewModel: ObservableObject {
         let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
 
-        // Accept as soon as the spoken phrase fully matches — don't wait for silence.
-        if GermanText.answersMatch(expected: expected, rawAnswer: trimmed) {
+        // Accept as soon as the spoken answer matches the selected mode.
+        if GermanText.answersMatch(expected: expected, rawAnswer: trimmed, mode: answerMode) {
             resolveAnswer(raw: trimmed)
             return
         }
@@ -280,7 +293,7 @@ final class GameViewModel: ObservableObject {
         stopRecognizer(resetTranscript: false)
         liveTranscript = raw
 
-        if GermanText.answersMatch(expected: expected, rawAnswer: raw) {
+        if GermanText.answersMatch(expected: expected, rawAnswer: raw, mode: answerMode) {
             streak += 1
             awardPoint()
             feedback = .correct(expected.fullPhrase)
@@ -290,7 +303,7 @@ final class GameViewModel: ObservableObject {
         }
 
         streak = 0
-        let heard = GermanText.parseAnswer(raw).map { "\($0.article.rawValue) \($0.word)" } ?? raw
+        let heard = GermanText.heardSummary(rawAnswer: raw, mode: answerMode)
         feedback = .incorrect(expected: expected.fullPhrase, heard: heard)
         speech.speakGerman(expected.fullPhrase, rateMultiplier: gameSpeed.speechRateMultiplier)
         consumeTurnWithoutScore()

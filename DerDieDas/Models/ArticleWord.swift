@@ -106,3 +106,60 @@ enum GameSpeed: String, CaseIterable, Identifiable {
     }
 }
 
+enum AnswerMode: String, CaseIterable, Identifiable {
+    case articleOnly
+    case articleAndWord
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .articleOnly: return "Article"
+        case .articleAndWord: return "Article + word"
+        }
+    }
+
+    var shortLabel: String {
+        switch self {
+        case .articleOnly: return "Article only"
+        case .articleAndWord: return "Full answer"
+        }
+    }
+
+    var helpText: String {
+        switch self {
+        case .articleOnly:
+            return "Say only der, die, or das. The noun does not need to be correct."
+        case .articleAndWord:
+            return "Say the article and the noun together, for example die Sonne."
+        }
+    }
+
+    var promptHint: String {
+        switch self {
+        case .articleOnly:
+            return "Wait for the beep, then say der, die, or das"
+        case .articleAndWord:
+            return "Wait for the beep, then say der/die/das + this word"
+        }
+    }
+
+    var listeningHint: String {
+        switch self {
+        case .articleOnly:
+            return "Listening… say der, die, or das"
+        case .articleAndWord:
+            return "Listening… say der/die/das + word"
+        }
+    }
+
+    var yourTurnHint: String {
+        switch self {
+        case .articleOnly:
+            return "Your turn — say der, die, or das"
+        case .articleAndWord:
+            return "Your turn — say der/die/das + word"
+        }
+    }
+}
+

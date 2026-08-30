@@ -36,10 +36,30 @@ struct GameView: View {
         VStack(alignment: .leading, spacing: 18) {
             brandHero
 
-            Text("Practice German articles out loud. The app says the noun, then beeps when it is your turn — answer with der, die, or das plus the word. No typing. Best on a real iPhone.")
+            Text(setupIntroText)
                 .font(AppTheme.bodyFont)
                 .foregroundStyle(AppTheme.muted)
                 .fixedSize(horizontal: false, vertical: true)
+
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Game mode")
+                    .font(AppTheme.captionFont)
+                    .foregroundStyle(AppTheme.muted)
+
+                Picker("Game mode", selection: $viewModel.answerMode) {
+                    ForEach(AnswerMode.allCases) { mode in
+                        Text(mode.label).tag(mode)
+                    }
+                }
+                .pickerStyle(.segmented)
+
+                Text(viewModel.answerMode.helpText)
+                    .font(AppTheme.captionFont)
+                    .foregroundStyle(AppTheme.muted)
+            }
+            .padding(16)
+            .background(AppTheme.surface)
+            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
 
             VStack(alignment: .leading, spacing: 12) {
                 Text("Players")
@@ -128,6 +148,15 @@ struct GameView: View {
         }
     }
 
+    private var setupIntroText: String {
+        switch viewModel.answerMode {
+        case .articleOnly:
+            return "Practice German articles out loud. The app says the noun, then beeps when it is your turn — answer with only der, die, or das."
+        case .articleAndWord:
+            return "Practice German articles out loud. The app says the noun, then beeps when it is your turn — answer with der, die, or das plus the word."
+        }
+    }
+
     private var brandHero: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Der Die Das")
@@ -173,6 +202,10 @@ struct GameView: View {
             if viewModel.players.count > 1 {
                 ScoreboardView(players: viewModel.players, currentPlayerID: viewModel.currentPlayer?.id)
             }
+
+            Text(viewModel.answerMode.shortLabel)
+                .font(AppTheme.captionFont)
+                .foregroundStyle(AppTheme.muted)
 
             paceStrip
 
@@ -268,7 +301,7 @@ struct GameView: View {
                 .id(viewModel.currentWord?.id)
                 .transition(.asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity), removal: .opacity))
 
-            Text("Wait for the beep, then say der/die/das + this word")
+            Text(viewModel.answerMode.promptHint)
                 .font(AppTheme.bodyFont)
                 .foregroundStyle(AppTheme.muted)
         }

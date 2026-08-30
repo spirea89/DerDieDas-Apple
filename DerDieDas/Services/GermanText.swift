@@ -22,10 +22,9 @@ enum GermanText {
         return Article(rawValue: cleaned)
     }
 
-    /// Accepts answers like "der Sonne", "die Sonne.", speech-ish variants.
-    static func parseAnswer(_ raw: String) -> (article: Article, word: String)? {
-        var normalized = normalize(raw)
-        normalized = normalized
+    /// Softens common speech-recognition misfires for der/die/das.
+    private static func softenSpeech(_ raw: String) -> String {
+        normalize(raw)
             .replacingOccurrences(of: #"\bdeer\b"#, with: "der", options: .regularExpression)
             .replacingOccurrences(of: #"\bdear\b"#, with: "der", options: .regularExpression)
             .replacingOccurrences(of: #"\bdir\b"#, with: "der", options: .regularExpression)
@@ -37,6 +36,11 @@ enum GermanText {
             .replacingOccurrences(of: #"[^\p{L}\s-]"#, with: " ", options: .regularExpression)
             .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
             .trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    /// Accepts answers like "der Sonne", "die Sonne.", speech-ish variants.
+    static func parseAnswer(_ raw: String) -> (article: Article, word: String)? {
+        let normalized = softenSpeech(raw)
 
         guard let match = normalized.range(of: #"\b(der|die|das)\b"#, options: .regularExpression) else {
             return nil
@@ -55,9 +59,45 @@ enum GermanText {
         return (article, word)
     }
 
-    static func answersMatch(expected: ArticleWord, rawAnswer: String) -> Bool {
-        guard let parsed = parseAnswer(rawAnswer) else { return false }
-        return parsed.article == expected.article
-            && normalize(parsed.word) == normalize(expected.word)
+    /// Finds der/die/das even when spoken alone (no noun).
+    static func parseSpokenArticle(_ raw: String) -> Article? {
+        if let parsed = parseAnswer(raw) {
+            return parsed.article
+        }
+        let normalized = softenSpeech(raw)
+        if let alone = Article(rawValue: normalized) {
+            return alone
+        }
+        guard let match = normalized.range(of: #"\b(der|die|das)\b"#, options: .regularExpression) else {
+            return nil
+        }
+        return Article(rawValue: String(normalized[match]))
+    }
+
+    static func answersMatch(expected: ArticleWord, rawAnswer: String, mode: AnswerMode) -> Bool {
+        switch mode {
+        case .articleOnly:
+            guard let article = parseSpokenArticle(rawAnswer) else { return false }
+            return article == expected.article
+        case .articleAndWord:
+            guard let parsed = parseAnswer(rawAnswer) else { return false }
+            return parsed.article == expected.article
+                && normalize(parsed.word) == normalize(expected.word)
+        }
+    }
+
+    static func heardSummary(rawAnswer: String, mode: AnswerMode) -> String {
+        switch mode {
+        case .articleOnly:
+            if let article = parseSpokenArticle(rawAnswer) {
+                return article.rawValue
+            }
+            return rawAnswer
+        case .articleAndWord:
+            if let parsed = parseAnswer(rawAnswer) {
+                return "\(parsed.article.rawValue) \(parsed.word)"
+            }
+            return rawAnswer
+        }
     }
 }
