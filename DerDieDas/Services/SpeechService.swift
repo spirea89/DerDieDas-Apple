@@ -107,8 +107,9 @@ final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
     }
 
     private func finishCueWait() {
-        cueContinuation?.resume()
+        guard let continuation = cueContinuation else { return }
         cueContinuation = nil
+        continuation.resume()
     }
 
     private func prepareSpeakCue() {
